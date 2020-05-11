@@ -129,18 +129,18 @@ const SignInFormBase = (props) => {
         </SignInText>
         <InputFloatLabel
           name="email"
+          label="Email"
+          type="email"
           value={formState.email}
           onChange={onChange}
-          type="text"
-          placeholder="Insert your Email"
         />
         <PasswordWrapper>
           <InputFloatLabel
             name="password"
+            label="Password"
+            type={showPassword ? 'text' : 'password'}
             value={formState.password}
             onChange={onChange}
-            type="password"
-            placeholder="Insert your password"
           />
           <EyeIconImg
             src={EyeIcon}
