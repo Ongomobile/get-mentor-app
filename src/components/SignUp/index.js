@@ -56,7 +56,6 @@ const SignUpHooks = (props) => {
   const [emailError, setEmailError] = useState('');
   const [isMentor, setIsMentor] = useState(false);
   const [email, setEmail] = useState('');
-  // const [passwordOne, setPasswordOne] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const [checked, setChecked] = useState(false);

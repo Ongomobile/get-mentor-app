@@ -1,6 +1,5 @@
 import React from 'react';
 import * as ROUTES from '../../constants/routes';
-import * as ROLES from '../../constants/roles';
 import { Link } from 'react-router-dom';
 import { ReactComponent as HomeIcon } from '../../assets/svgs/home-icon.svg';
 import { ReactComponent as HeartIcon } from '../../assets/svgs/heart.svg';

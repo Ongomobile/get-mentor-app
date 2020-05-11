@@ -6,4 +6,4 @@ export const ACCOUNT = '/account';
 export const ADMIN = '/admin';
 export const PASSWORD_FORGET = '/pw-forget';
 export const MENTORS = '/mentors';
-export const USER_DETAILS = '/admin/:id';
+export const USER_DETAILS = '/users/:id';

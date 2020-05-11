@@ -70,10 +70,6 @@ export const StyledSpan = styled.span`
   margin-top: 40px;
 `;
 
-export const CheckboxWrapper = styled.div`
-  margin-top: 24px;
-  padding-bottom: 50px;
-`;
 export const SignInText = styled.p`
   color: #798895;
   line-height: 1.4;

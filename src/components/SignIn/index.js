@@ -12,7 +12,6 @@ import {
   SignInContentWrapper,
   SignInText,
   PasswordWrapper,
-  CheckboxWrapper,
   StyledSpan,
   GoogleSignInBtn,
   GoogleBtnWrapper,
@@ -23,7 +22,6 @@ import {
 import InputFloatLabel from '../UI_Components/Input';
 import { EyeIconImg } from '../SignUp/signup-styles';
 import EyeIcon from '../../assets/images/eye.png';
-import CheckBox from '../UI_Components/Checkbox';
 import Button from '../UI_Components/Button';
 import Heading from '../UI_Components/Heading';
 import GoogleSignIn from '../../assets/svgs/google-sign-in.svg';

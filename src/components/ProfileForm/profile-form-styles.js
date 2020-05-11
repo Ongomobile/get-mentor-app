@@ -80,3 +80,7 @@ export const UploadLink = styled.a`
 export const descFieldOveride = {
   height: '100px',
 };
+
+export const CurrentTagsDisplay = styled.div`
+  height: 20px;
+`;

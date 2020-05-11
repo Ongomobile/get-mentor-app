@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AuthUserContext } from '../Session';
+import { withFirebase } from '../Firebase';
 import { compose } from 'recompose';
 import { withAuthorization, withEmailVerification } from '../Session';
 import { PasswordForgetForm } from '../PasswordForget';
@@ -11,26 +12,40 @@ import Modal from '../UI_Components/Modal';
 import ProfileForm from '../ProfileForm';
 import Heading from '../UI_Components/Heading';
 
-const AccountPage = () => {
+const AccountPage = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const handleClose = () => {
     setIsOpen(false);
   };
   const handleSaveClick = (profileDetails) => {
     handleClose();
-    alert(
-      `Profile Data
-      Name: ${profileDetails.name}
-      Email: ${profileDetails.email}
-      Description: ${profileDetails.description}
-      Mentor: ${profileDetails.mentor}
-      Tags: ${profileDetails.tags} 
-      ProfileImage: ${profileDetails.imgUrl}  
-      `,
-    );
+    updateUserData(profileDetails);
   };
 
+  const updateUserData = (data) => {
+    const Id = data.userId;
+    props.firebase.db
+      .ref(`users/${Id}`)
+      .set({
+        username: data.username,
+        name: data.name,
+        email: data.email,
+        description: data.description,
+        mentor: data.mentor,
+        tags: data.tags,
+        imgUrl: data.imgUrl,
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    // if (data.mentor) {
+    //   roles[ROLES.MENTOR] = ROLES.MENTOR;
+    // }
+    // props.firebase.set({
+
+    // })
+  };
   return (
     <AuthUserContext.Consumer>
       {(authUser) => (
@@ -45,6 +60,7 @@ const AccountPage = () => {
               <ProfileForm
                 close={handleClose}
                 handleSaveClick={handleSaveClick}
+                user={authUser}
               />
             </Modal>
           )}
@@ -69,6 +85,7 @@ const AccountPage = () => {
 const authCondition = (authUser) => !!authUser;
 
 export default compose(
+  withFirebase,
   withEmailVerification,
   withAuthorization(authCondition),
 )(AccountPage);

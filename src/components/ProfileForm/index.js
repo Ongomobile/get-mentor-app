@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withFirebase } from '../Firebase';
 import {
   ProfileHeader,
@@ -13,6 +13,7 @@ import {
   ProfileImage,
   descFieldOveride,
   UploadLink,
+  CurrentTagsDisplay,
 } from './profile-form-styles';
 import PageContainer from '../PageContainer';
 import * as ROUTES from '../../constants/routes';
@@ -32,21 +33,47 @@ const ProfileForm = (props) => {
   const [isMentor, setIsMentor] = useState(false);
   const [checked, setChecked] = useState(false);
   const [profileDetails, setProfileDetails] = useState({
-    name: '',
-    email: '',
-    description: '',
-    photoUrl: null,
-    mentor: false,
-    tags: [],
-    imgUrl: null,
+    userId: props.user.uid,
+    username: props.user.username || '',
+    name: props.user.name || '',
+    email: props.user.email || '',
+    description: props.user.description || '',
+    mentor: props.user.mentor || false,
+    tags: props.user.tags || [],
+    imgUrl: props.user.imgUrl || null,
   });
 
+  useEffect(() => {
+    if (props.user.mentor) {
+      setChecked(true);
+    }
+    if (props.user.tags) {
+      setProfileDetails({
+        ...profileDetails,
+        tags: props.user.tags,
+      });
+    }
+    if (props.user.imgUrl) {
+      const proPicUrl = props.user.imgUrl;
+      setProfileDetails({
+        ...profileDetails,
+        imgUrl: props.user.imgUrl,
+      });
+      setUrl(proPicUrl);
+    }
+  }, []);
   const handleCheckboxChange = () => {
     setChecked(!checked);
     if (checked === false) {
       setProfileDetails({
         ...profileDetails,
         mentor: true,
+      });
+    }
+    if (checked === true) {
+      setProfileDetails({
+        ...profileDetails,
+        mentor: false,
       });
     }
   };
@@ -63,6 +90,7 @@ const ProfileForm = (props) => {
       tags: tagsToAdd,
     });
   };
+
   const handleDetails = (e) => {
     setProfileDetails({
       ...profileDetails,
@@ -86,7 +114,6 @@ const ProfileForm = (props) => {
     }
   };
   const handleUpload = (image) => {
-    console.log('called', image);
     const uploadTask = props.firebase.storage
       .ref(`images/${image.name}`)
       .put(image);
@@ -165,6 +192,13 @@ const ProfileForm = (props) => {
           </LeftSideBar>
           <FormFieldWrapper>
             <InputFloatLabel
+              name="username"
+              label="Username"
+              type="text"
+              value={profileDetails.username}
+              onChange={handleDetails}
+            />
+            <InputFloatLabel
               name="name"
               label="Name"
               type="text"
@@ -186,6 +220,10 @@ const ProfileForm = (props) => {
               value={profileDetails.description}
               onChange={handleDetails}
             />
+            <p>Current Tags</p>
+            <CurrentTagsDisplay>
+              {profileDetails.tags}
+            </CurrentTagsDisplay>
             <TagsUi getTags={getTagEntered} />
           </FormFieldWrapper>
         </ProfileContentWrapper>
