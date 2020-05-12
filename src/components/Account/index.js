@@ -38,13 +38,6 @@ const AccountPage = (props) => {
       .catch((err) => {
         console.log(err);
       });
-
-    // if (data.mentor) {
-    //   roles[ROLES.MENTOR] = ROLES.MENTOR;
-    // }
-    // props.firebase.set({
-
-    // })
   };
   return (
     <AuthUserContext.Consumer>
@@ -67,7 +60,7 @@ const AccountPage = (props) => {
           <PageContainer>
             <AccountContent>
               <Heading h1>Account: {authUser.email}</Heading>
-              <Button primary on onClick={() => setIsOpen(true)}>
+              <Button primary onClick={() => setIsOpen(true)}>
                 Update Profile
               </Button>
               <Heading h4>Change Password</Heading>

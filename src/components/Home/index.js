@@ -52,7 +52,7 @@ const RequestsBase = (props) => {
 
   useEffect(() => {
     props.firebase.helpRequest().off();
-  }, []);
+  });
 
   const RequestList = ({ helpRequests }) => {
     return (
@@ -65,12 +65,7 @@ const RequestsBase = (props) => {
   };
 
   const RequestItem = ({ request }) => {
-    return (
-      <li>
-        {/* <strong>USER ID: {request.userId}</strong> Requested:{' '} */}
-        {request.requestText}
-      </li>
-    );
+    return <li>{request.requestText}</li>;
   };
 
   const onCreateRequest = (event, authUser) => {

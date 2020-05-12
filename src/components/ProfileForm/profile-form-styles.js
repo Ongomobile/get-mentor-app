@@ -40,6 +40,7 @@ export const ProfileContentWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 `;
+// displayName added where you may want to see state more clearly in dev tools
 ProfileContentWrapper.displayName = 'ProfileContentWrapper';
 
 export const FormFieldWrapper = styled.div`
@@ -81,7 +82,3 @@ export const UploadLink = styled.a`
 export const descFieldOveride = {
   height: '100px',
 };
-
-export const CurrentTagsDisplay = styled.div`
-  height: 20px;
-`;

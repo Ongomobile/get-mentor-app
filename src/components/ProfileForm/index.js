@@ -13,7 +13,6 @@ import {
   ProfileImage,
   descFieldOveride,
   UploadLink,
-  CurrentTagsDisplay,
 } from './profile-form-styles';
 import PageContainer from '../PageContainer';
 import * as ROUTES from '../../constants/routes';
@@ -79,15 +78,9 @@ const ProfileForm = (props) => {
   };
 
   const getTagEntered = (titles) => {
-    const tagsToAdd = [];
-    const getTags = Object.values(titles);
-    const newTags = getTags.forEach((tag, a) => {
-      const tagText = tag.text;
-      tagsToAdd.push(tagText);
-    });
     setProfileDetails({
       ...profileDetails,
-      tags: tagsToAdd,
+      tags: titles,
     });
   };
 
@@ -220,11 +213,10 @@ const ProfileForm = (props) => {
               value={profileDetails.description}
               onChange={handleDetails}
             />
-            <p>Current Tags</p>
-            <CurrentTagsDisplay>
-              {profileDetails.tags}
-            </CurrentTagsDisplay>
-            <TagsUi getTags={getTagEntered} />
+            <TagsUi
+              currentTags={profileDetails.tags}
+              getTags={getTagEntered}
+            />
           </FormFieldWrapper>
         </ProfileContentWrapper>
       </PageContainer>

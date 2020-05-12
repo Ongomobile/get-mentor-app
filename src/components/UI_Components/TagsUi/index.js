@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   FieldContainer,
   TagTitle,
@@ -62,13 +62,20 @@ const TagUi = (props) => {
     titles: [],
   });
   const [currentValue, setCurrentValue] = useState('');
+  const currentTags = props.currentTags;
+  useEffect(() => {
+    setUiState({
+      ...uiState,
+      titles: currentTags,
+    });
+  }, []);
 
   const addTitle = (title) => {
     const uniqid = () => Math.random().toString(36).substr(2, 9);
-
-    const { titles } = uiState;
     const newTitleId = uniqid();
+    const { titles } = uiState;
     titles[newTitleId] = { text: title };
+
     setUiState({
       titles,
     });
