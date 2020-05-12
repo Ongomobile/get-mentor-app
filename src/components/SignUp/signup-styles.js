@@ -38,7 +38,7 @@ export const PasswordWrapper = styled.div`
 export const EyeIconImg = styled.img`
   position: absolute;
   top: 38px;
-  right: 5px;
+  right: 10px;
   z-index: 1000;
   width: 18px;
   height: 18px;
