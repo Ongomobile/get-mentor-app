@@ -40,6 +40,7 @@ export const ProfileContentWrapper = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
 `;
+ProfileContentWrapper.displayName = 'ProfileContentWrapper';
 
 export const FormFieldWrapper = styled.div`
   display: block;

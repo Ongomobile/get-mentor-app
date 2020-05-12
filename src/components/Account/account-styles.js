@@ -7,3 +7,5 @@ export const AccountContent = styled.div`
   margin-top: 15%;
   padding: 20px;
 `;
+// displayName added where you may want to see state more clearly in dev tools
+AccountContent.displayName = 'AccountContent';
