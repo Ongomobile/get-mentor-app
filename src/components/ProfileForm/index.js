@@ -13,6 +13,8 @@ import {
   ProfileImage,
   descFieldOveride,
   UploadLink,
+  HeadingWrapper,
+  TagsTitle,
 } from './profile-form-styles';
 import PageContainer from '../PageContainer';
 import * as ROUTES from '../../constants/routes';
@@ -153,7 +155,9 @@ const ProfileForm = (props) => {
         </ProfileHeaderContent>
       </ProfileHeader>
       <PageContainer>
-        <Heading h1>Profile</Heading>
+        <HeadingWrapper>
+          <Heading h1>Profile</Heading>
+        </HeadingWrapper>
         <ProfileContentWrapper>
           <LeftSideBar>
             <ProfilePicWrapper>
@@ -213,10 +217,14 @@ const ProfileForm = (props) => {
               value={profileDetails.description}
               onChange={handleDetails}
             />
+            <TagsTitle>
+              Tags (so people can find you easily)
+            </TagsTitle>
             <TagsUi
               currentTags={profileDetails.tags}
               getTags={getTagEntered}
             />
+            <TagsTitle>Enter tag and press space</TagsTitle>
           </FormFieldWrapper>
         </ProfileContentWrapper>
       </PageContainer>

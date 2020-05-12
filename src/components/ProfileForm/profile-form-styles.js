@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from '../UI_Components/Media';
 
 export const ProfileHeader = styled.div`
   position: absolute;
@@ -39,6 +40,16 @@ export const ProfileContentWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+
+  ${media.rgTabPort`
+   flex-direction: column;
+    align-items:center;
+  `}
+
+  ${media.custom1`
+    flex-direction: column;
+    align-items:center;
+  `}
 `;
 // displayName added where you may want to see state more clearly in dev tools
 ProfileContentWrapper.displayName = 'ProfileContentWrapper';
@@ -46,12 +57,28 @@ ProfileContentWrapper.displayName = 'ProfileContentWrapper';
 export const FormFieldWrapper = styled.div`
   display: block;
   width: 33.33%;
+
+  ${media.rgTabPort`
+   width:70%;
+  `}
+
+  ${media.custom1`
+   width:100%;
+  `}
 `;
 
 export const LeftSideBar = styled.div`
   padding-top: 1%;
   position: relative;
   width: 33%;
+
+  ${media.rgTabPort`
+   width:70%;
+  `}
+
+  ${media.custom1`
+   width:100%;
+  `}
 `;
 
 export const ProfilePicWrapper = styled.div`
@@ -82,3 +109,17 @@ export const UploadLink = styled.a`
 export const descFieldOveride = {
   height: '100px',
 };
+
+export const HeadingWrapper = styled.div`
+  ${media.rgTabPort`
+    margin-top: 5%;
+  `}
+  ${media.custom1`
+    margin-top: 20%;
+  `}
+`;
+
+export const TagsTitle = styled.p`
+  font-size: 12px;
+  opacity: 0.5;
+`;

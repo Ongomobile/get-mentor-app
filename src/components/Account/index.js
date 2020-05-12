@@ -45,7 +45,7 @@ const AccountPage = (props) => {
         <div>
           {isOpen && (
             <Modal
-              setHeight={'100vh'}
+              setHeight={'850px'}
               setWidth={'90vw'}
               setMargin={'2% auto'}
               setPadding={'13% 4.2% 0 4.2%'}

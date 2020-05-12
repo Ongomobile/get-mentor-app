@@ -5,7 +5,6 @@ const PageContainer = styled.div`
   margin-bottom: 150px;
   padding: 0;
   max-width: 1440px;
-  /* background-color: red; */
 
   @media screen and (max-width: 768px) {
     padding: 0;

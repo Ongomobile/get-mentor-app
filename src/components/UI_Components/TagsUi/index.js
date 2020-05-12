@@ -47,7 +47,7 @@ const TagInput = (props) => {
           ref={(input) => (text = input)}
           type="text"
           name="new-item"
-          placeholder="Add tag and press space"
+          // placeholder="Add tag and press space"
           autoComplete="off"
           defaultValue={props.value}
           onKeyDown={(e) => tagEvent(e)}
