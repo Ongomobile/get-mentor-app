@@ -81,7 +81,9 @@ const SignUpHooks = (props) => {
   }, [email]);
   const onSubmit = (event) => {
     const roles = {};
-
+    if (isMentor) {
+      roles[ROLES.MENTOR] = ROLES.MENTOR;
+    }
     props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
