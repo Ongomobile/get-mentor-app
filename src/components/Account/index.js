@@ -34,6 +34,7 @@ const AccountPage = (props) => {
         mentor: data.mentor,
         tags: data.tags,
         imgUrl: data.imgUrl,
+        roles: data.roles,
       })
       .catch((err) => {
         console.log(err);

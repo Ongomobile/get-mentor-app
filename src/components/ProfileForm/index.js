@@ -29,6 +29,7 @@ import CheckBox from '../UI_Components/Checkbox';
 import TagsUi from '../UI_Components/TagsUi';
 
 const ProfileForm = (props) => {
+  console.log(props.user);
   const [image, setImage] = useState(null);
   const [url, setUrl] = useState('');
   const [isMentor, setIsMentor] = useState(false);
@@ -42,6 +43,7 @@ const ProfileForm = (props) => {
     mentor: props.user.isMentor || false,
     tags: props.user.tags || [],
     imgUrl: props.user.imgUrl || null,
+    roles: props.user.roles,
   });
 
   useEffect(() => {
