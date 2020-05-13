@@ -45,7 +45,7 @@ const ProfileForm = (props) => {
   });
 
   useEffect(() => {
-    if (props.user.mentor) {
+    if (props.user.isMentor) {
       setChecked(true);
     }
     if (props.user.tags) {
