@@ -39,7 +39,7 @@ const ProfileForm = (props) => {
     name: props.user.name || '',
     email: props.user.email || '',
     description: props.user.description || '',
-    mentor: props.user.mentor || false,
+    mentor: props.user.isMentor || false,
     tags: props.user.tags || [],
     imgUrl: props.user.imgUrl || null,
   });
