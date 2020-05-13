@@ -80,6 +80,8 @@ const SignUpHooks = (props) => {
     }
   }, [email]);
   const onSubmit = (event) => {
+    const roles = {};
+
     props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
@@ -87,6 +89,7 @@ const SignUpHooks = (props) => {
         return props.firebase.user(authUser.user.uid).set({
           email,
           isMentor,
+          roles,
         });
       })
       .then(() => {
