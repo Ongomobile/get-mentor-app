@@ -80,18 +80,13 @@ const SignUpHooks = (props) => {
     }
   }, [email]);
   const onSubmit = (event) => {
-    const roles = {};
-
-    if (isMentor) {
-      roles[ROLES.MENTOR] = ROLES.MENTOR;
-    }
     props.firebase
       .doCreateUserWithEmailAndPassword(email, passwordOne)
       .then((authUser) => {
         // Create a user in your Firebase realtime database
         return props.firebase.user(authUser.user.uid).set({
           email,
-          roles,
+          isMentor,
         });
       })
       .then(() => {
