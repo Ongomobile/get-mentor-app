@@ -5,7 +5,7 @@ export const StyledButton = styled.button`
   border-radius: 4px;
   background-color: ${(props) =>
     props.primary ? COLORS.PRIMARY : '#ffffff'};
-  color: black;
+  color: ${COLORS.BLACK};
   padding: 12px 14px;
   font-size: ${(props) => (props.big ? '18px' : '14px')};
   font-family: 'Inter';

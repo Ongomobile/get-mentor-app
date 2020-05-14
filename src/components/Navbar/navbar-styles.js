@@ -16,10 +16,6 @@ export const Header = styled.header`
   @media screen and (max-width: 600px) {
     display: none;
   }
-  /* @media screen and (min-width: 1445px) {
-    position: relative;
-    margin: 0 auto;
-  } */
 `;
 export const NavContainer = styled.div`
   display: flex;
@@ -75,7 +71,7 @@ export const MobileSignInWrapper = styled.div`
 `;
 
 export const linkStyle = {
-  color: 'black',
+  color: `${COLORS.BLACK}`,
   fontfamily: 'Inter',
   fontStyle: 'normal',
   fontWeight: 600,

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
-import { PasswordForgetLink } from '../PasswordForget';
+import { PasswordForgetLink } from '../../PasswordForget';
 
-import { withFirebase } from '../Firebase';
-import * as ROUTES from '../../constants/routes';
+import { withFirebase } from '../../Firebase';
+import * as ROUTES from '../../../constants/routes';
 import {
   SignInWrapper,
   SignInFormWrapper,
@@ -19,13 +19,13 @@ import {
   SignInImg,
   hdOveride,
 } from './sign-styles';
-import InputFloatLabel from '../UI_Components/Input';
+import InputFloatLabel from '../../UI_Components/Input';
 import { EyeIconImg } from '../SignUp/signup-styles';
-import EyeIcon from '../../assets/images/eye.png';
-import Button from '../UI_Components/Button';
-import Heading from '../UI_Components/Heading';
-import GoogleSignIn from '../../assets/svgs/google-sign-in.svg';
-import SignInSvg from '../../assets/svgs/SIGNIN.svg';
+import EyeIcon from '../../../assets/images/eye.png';
+import Button from '../../UI_Components/Button';
+import Heading from '../../UI_Components/Heading';
+import GoogleSignIn from '../../../assets/svgs/google-sign-in.svg';
+import SignInSvg from '../../../assets/svgs/SIGNIN.svg';
 const SignInPage = () => (
   <div>
     <SignInWrapper>

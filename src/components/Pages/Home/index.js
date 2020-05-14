@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { compose } from 'recompose';
-import { withFirebase } from '../Firebase';
+import { withFirebase } from '../../Firebase';
 import {
   withAuthorization,
   withEmailVerification,
   AuthUserContext,
-} from '../Session';
+} from '../../Session';
 
 import { HomeContent } from './home-styles';
-import PageContainer from '../PageContainer';
-import Heading from '../UI_Components/Heading';
+import PageContainer from '../../PageContainer';
+import Heading from '../../UI_Components/Heading';
 
 const HomePage = () => {
   return (

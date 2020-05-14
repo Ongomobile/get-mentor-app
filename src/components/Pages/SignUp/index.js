@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { compose } from 'recompose';
-import InputFloatLabel from '../UI_Components/Input';
+import InputFloatLabel from '../../UI_Components/Input';
 import { Link, withRouter } from 'react-router-dom';
-import { withFirebase } from '../Firebase';
-import * as ROUTES from '../../constants/routes';
-import * as ROLES from '../../constants/roles';
-import { validateEmail } from '../../utils/ValidateEmail';
-import CheckBox from '../UI_Components/Checkbox';
-import * as COLORS from '../../constants/colors';
+import { withFirebase } from '../../Firebase';
+import * as ROUTES from '../../../constants/routes';
+import * as ROLES from '../../../constants/roles';
+import { validateEmail } from '../../../utils/ValidateEmail';
+import CheckBox from '../../UI_Components/Checkbox';
+import * as COLORS from '../../../constants/colors';
 
 import {
   // Button,
@@ -26,12 +26,12 @@ import {
   regBtnStyle,
   hdOveride,
 } from './signup-styles';
-import EyeIcon from '../../assets/images/eye.png';
-import GoogleSignUp from '../../assets/svgs/google-sign-up.svg';
-import RegisterSvg from '../../assets/svgs/REGISTER.svg';
-import usePasswordValidator from '../PasswordValidator';
-import Button from '../UI_Components/Button';
-import Heading from '../UI_Components/Heading';
+import EyeIcon from '../../../assets/images/eye.png';
+import GoogleSignUp from '../../../assets/svgs/google-sign-up.svg';
+import RegisterSvg from '../../../assets/svgs/REGISTER.svg';
+import usePasswordValidator from '../../PasswordValidator';
+import Button from '../../UI_Components/Button';
+import Heading from '../../UI_Components/Heading';
 
 const SignUpPage = () => (
   <div>

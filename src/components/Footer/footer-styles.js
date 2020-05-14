@@ -45,3 +45,12 @@ export const FooterLink = styled.div`
     margin: 0;
   }
 `;
+
+export const linkStyle = {
+  color: `${COLORS.BLACK}`,
+  fontfamily: 'Inter',
+  fontStyle: 'normal',
+  fontWeight: 600,
+  fontSize: 14,
+  lineHeight: '140%',
+};

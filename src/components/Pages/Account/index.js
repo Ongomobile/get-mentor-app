@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { AuthUserContext } from '../Session';
-import { withFirebase } from '../Firebase';
+import { AuthUserContext } from '../../Session';
+import { withFirebase } from '../../Firebase';
 import { compose } from 'recompose';
-import { withAuthorization, withEmailVerification } from '../Session';
-import PageContainer from '../PageContainer';
-import ProfileForm from '../UI_Components/ProfileForm';
-import Heading from '../UI_Components/Heading';
+import {
+  withAuthorization,
+  withEmailVerification,
+} from '../../Session';
+import PageContainer from '../../PageContainer';
+import ProfileForm from '../../UI_Components/ProfileForm';
+import Heading from '../../UI_Components/Heading';
 
 const AccountPage = (props) => {
   const handleSaveClick = (profileDetails) => {

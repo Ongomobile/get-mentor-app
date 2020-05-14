@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as ROUTES from '../../constants/routes';
-import Button from '../UI_Components/Button';
-import PageContainer from '../PageContainer';
-import Heading from '../UI_Components/Heading';
-import LovingDude from '../../assets/svgs/loving.svg';
+import * as ROUTES from '../../../constants/routes';
+import Button from '../../UI_Components/Button';
+import PageContainer from '../../PageContainer';
+import Heading from '../../UI_Components/Heading';
+import LovingDude from '../../../assets/svgs/loving.svg';
 import {
   HeroContainer,
   HeroContentRight,
