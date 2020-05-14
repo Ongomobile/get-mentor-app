@@ -5,6 +5,7 @@ import Button from '../../UI_Components/Button';
 import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
 import LovingDude from '../../../assets/svgs/loving.svg';
+import StyledCard from '../../UI_Components/Card';
 import {
   HeroContainer,
   HeroContentRight,
@@ -52,10 +53,10 @@ const LandingPage = () => (
     <LandingMentorsContainer>
       <MentorsHeading>Our New Mentors</MentorsHeading>
       <MentorsWrapper>
-        <TempMentor />
-        <TempMentor />
-        <TempMentor />
-        <TempMentor />
+        <StyledCard />
+        <StyledCard />
+        <StyledCard />
+        <StyledCard />
       </MentorsWrapper>
       <MentorsBtnWrapper>
         <Button inverse>See All Mentors</Button>
