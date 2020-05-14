@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import media from '../UI_Components/Media';
+import media from '../Media';
 
 export const ProfileHeader = styled.div`
   position: absolute;
@@ -71,6 +71,7 @@ export const LeftSideBar = styled.div`
   padding-top: 1%;
   position: relative;
   width: 33%;
+  padding-bottom: 40px;
 
   ${media.rgTabPort`
    width:70%;
@@ -122,4 +123,9 @@ export const HeadingWrapper = styled.div`
 export const TagsTitle = styled.p`
   font-size: 12px;
   opacity: 0.5;
+`;
+
+export const SaveBtnWrapper = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `;

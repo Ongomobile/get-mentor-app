@@ -9,6 +9,7 @@ export const FooterWrapper = styled.div`
   min-height: 100px;
   max-height: 15%;
   width: 100%;
+  z-index: 1001;
   background-color: ${(props) =>
     props.primary ? COLORS.PRIMARY : '#ffffff'};
 

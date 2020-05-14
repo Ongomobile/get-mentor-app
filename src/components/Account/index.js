@@ -3,23 +3,14 @@ import { AuthUserContext } from '../Session';
 import { withFirebase } from '../Firebase';
 import { compose } from 'recompose';
 import { withAuthorization, withEmailVerification } from '../Session';
-import { PasswordForgetForm } from '../PasswordForget';
-import PasswordChangeForm from '../PasswordChange';
 import PageContainer from '../PageContainer';
-import { AccountContent } from './account-styles';
-import Button from '../UI_Components/Button';
-import Modal from '../UI_Components/Modal';
-import ProfileForm from '../ProfileForm';
+import ProfileForm from '../UI_Components/ProfileForm';
 import Heading from '../UI_Components/Heading';
 
 const AccountPage = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const handleClose = () => {
-    setIsOpen(false);
-  };
   const handleSaveClick = (profileDetails) => {
-    handleClose();
     updateUserData(profileDetails);
+    alert('Profile Details Saved');
   };
 
   const updateUserData = (data) => {
@@ -43,34 +34,13 @@ const AccountPage = (props) => {
   return (
     <AuthUserContext.Consumer>
       {(authUser) => (
-        <div>
-          {isOpen && (
-            <Modal
-              setHeight={'850px'}
-              setWidth={'90vw'}
-              setMargin={'2% auto'}
-              setPadding={'13% 4.2% 0 4.2%'}
-            >
-              <ProfileForm
-                close={handleClose}
-                handleSaveClick={handleSaveClick}
-                user={authUser}
-              />
-            </Modal>
-          )}
-          <PageContainer>
-            <AccountContent>
-              <Heading h1>Account: {authUser.email}</Heading>
-              <Button primary onClick={() => setIsOpen(true)}>
-                Update Profile
-              </Button>
-              <Heading h4>Change Password</Heading>
-              <PasswordChangeForm />
-              <Heading h4>Forgot Password</Heading>
-              <PasswordForgetForm />
-            </AccountContent>
-          </PageContainer>
-        </div>
+        <PageContainer>
+          <Heading h1>Profile</Heading>
+          <ProfileForm
+            handleSaveClick={handleSaveClick}
+            user={authUser}
+          />
+        </PageContainer>
       )}
     </AuthUserContext.Consumer>
   );
