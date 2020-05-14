@@ -1,9 +1,10 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
+import * as COLORS from '../../../constants/colors';
 
 const baseStyle = css`
   margin-bottom: ${(props) => props.noMargin && '0'};
-  color: #202020;
+  color: ${COLORS.BLACK};
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   margin-top: 0;

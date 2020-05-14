@@ -18,6 +18,7 @@ import {
   TempMentor,
   MentorsBtnWrapper,
   inverseBtnOveride,
+  LandingText,
 } from './landing-styles';
 
 const LandingPage = () => (
@@ -25,12 +26,12 @@ const LandingPage = () => (
     <HeroContainer>
       <HeroContentLeft>
         <Heading h1>Connecting people to improve their lives</Heading>
-        <p>
+        <LandingText>
           Do you want be a Mentor? Or do you need help with something?
           Maybe both? This is the place for you. We connect people
           that just look to help eachother for the pleasure of doing
           it. And all for free.
-        </p>
+        </LandingText>
         <Button style={inverseBtnOveride} inverse big hidemobile>
           <Link style={linkStyle} to={ROUTES.SIGN_UP}>
             {' '}

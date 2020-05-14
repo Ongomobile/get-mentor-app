@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as COLORS from '../../constants/colors';
 
 export const linkStyle = { color: 'black' };
 export const btnOveride = { margin: '0' };
@@ -102,4 +103,8 @@ export const MentorsBtnWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 50px;
+`;
+
+export const LandingText = styled.p`
+  color: ${COLORS.MEDIUMGREY};
 `;

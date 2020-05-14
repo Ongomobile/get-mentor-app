@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as COLORS from '../../../constants/colors';
 
 export const InputContainer = styled.div`
   display: flex;
@@ -18,7 +19,8 @@ export const InputContainer = styled.div`
     z-index: 500;
   }
   & > label {
-    color: #757575;
+    color: ${COLORS.MEDIUMGREY};
+    /* color: #757575; */
     position: absolute;
     top: 15px;
     left: 15px;

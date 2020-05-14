@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as COLORS from '../../constants/colors';
 
 export const SignInWrapper = styled.div`
   display: flex;
@@ -71,7 +72,7 @@ export const StyledSpan = styled.span`
 `;
 
 export const SignInText = styled.p`
-  color: #798895;
+  color: ${COLORS.MEDIUMGREY};
   line-height: 1.4;
   font-size: 20px;
   font-family: Inter;

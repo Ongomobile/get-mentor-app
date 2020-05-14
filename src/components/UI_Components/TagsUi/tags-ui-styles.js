@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as COLORS from '../../../constants/colors';
 
 export const FieldContainer = styled.div`
   background: white;
@@ -19,10 +20,10 @@ export const TagTitle = styled.span`
   font-size: 16px;
   text-transform: capitalize;
   line-height: 24px;
-  background-color: #2a3844;
+  background-color: ${COLORS.BLACK};
   padding: 6px 18px;
   margin: 6px;
-  border-radius: 40px;
+  border-radius: 4px;
 `;
 
 export const CrossIcon = styled.img`
@@ -46,7 +47,7 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   flex: 1;
-  color: #2a3844;
+  color: ${COLORS.BLACK};
   border: transparent;
   font-size: 16px;
   line-height: 24px;
