@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/svgs/logo.svg';
 import { ReactComponent as MobileLogo } from '../../assets/svgs/mobile-logo.svg';
 import Button from '../UI_Components/Button';
+import { LinkStyle } from '../UI_Components/Link';
 import {
   Header,
   NavContainer,
@@ -37,9 +38,9 @@ const NavigationAuth = ({ authUser }) => {
   return (
     <div>
       <MobileLogoWrapper>
-        <Link to={ROUTES.LANDING}>
+        <LinkStyle to={ROUTES.LANDING}>
           <MobileLogo />
-        </Link>
+        </LinkStyle>
       </MobileLogoWrapper>
       <MobileSignInWrapper>
         <SignOutButton />
@@ -47,31 +48,23 @@ const NavigationAuth = ({ authUser }) => {
       <Header>
         <NavContainer>
           <LogoWrapper>
-            <Link to={ROUTES.LANDING}>
+            <LinkStyle to={ROUTES.LANDING}>
               <Logo />
-            </Link>
+            </LinkStyle>
           </LogoWrapper>
           <NavLinkContainer>
             <NavLinkWrapper>
-              <Link style={linkStyle} to={ROUTES.HOME}>
-                Home
-              </Link>
+              <LinkStyle to={ROUTES.HOME}>Home</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
-              <Link style={linkStyle} to={ROUTES.MENTORS}>
-                Mentors
-              </Link>
+              <LinkStyle to={ROUTES.MENTORS}>Mentors</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
-              <Link style={linkStyle} to={ROUTES.ACCOUNT}>
-                Account
-              </Link>
+              <LinkStyle to={ROUTES.ACCOUNT}>Account</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
               {!!authUser.roles[ROLES.MENTOR] && (
-                <Link style={linkStyle} to={ROUTES.ADMIN}>
-                  Admin
-                </Link>
+                <LinkStyle to={ROUTES.ADMIN}>Admin</LinkStyle>
               )}
             </NavLinkWrapper>
             <NavLinkWrapper>
@@ -87,9 +80,9 @@ const NavigationNonAuth = () => {
   return (
     <div>
       <MobileLogoWrapper>
-        <Link to={ROUTES.LANDING}>
+        <LinkStyle to={ROUTES.LANDING}>
           <MobileLogo />
-        </Link>
+        </LinkStyle>
       </MobileLogoWrapper>
       <MobileSignInWrapper>
         <Link style={logInStyle} to={ROUTES.SIGN_IN}>
@@ -105,24 +98,16 @@ const NavigationNonAuth = () => {
           </LogoWrapper>
           <NavLinkContainer>
             <NavLinkWrapper>
-              <Link style={linkStyle} to={ROUTES.HOME}>
-                Home
-              </Link>
+              <LinkStyle to={ROUTES.HOME}>Home</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
-              <Link style={linkStyle} to={ROUTES.MENTORS}>
-                Mentors
-              </Link>
+              <LinkStyle to={ROUTES.MENTORS}>Mentors</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
-              <Link style={linkStyle} to={ROUTES.SIGN_IN}>
-                Log In
-              </Link>
+              <LinkStyle to={ROUTES.SIGN_IN}>Log In</LinkStyle>
             </NavLinkWrapper>
             <Button primary style={regBtnStyle}>
-              <Link style={linkStyle} to={ROUTES.SIGN_UP}>
-                Register
-              </Link>
+              <LinkStyle to={ROUTES.SIGN_UP}>Register</LinkStyle>
             </Button>
           </NavLinkContainer>
         </NavContainer>

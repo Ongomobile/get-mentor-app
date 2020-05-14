@@ -70,14 +70,6 @@ export const MobileSignInWrapper = styled.div`
   }
 `;
 
-export const linkStyle = {
-  color: `${COLORS.BLACK}`,
-  fontfamily: 'Inter',
-  fontStyle: 'normal',
-  fontWeight: 600,
-  fontSize: 14,
-  lineHeight: '140%',
-};
 export const regBtnStyle = {
   marginLeft: 31,
 };

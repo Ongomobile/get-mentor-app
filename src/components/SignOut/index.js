@@ -4,7 +4,7 @@ import Button from '../UI_Components/Button';
 
 const SignOutButton = ({ firebase }) => (
   <Button primary onClick={firebase.doSignOut}>
-    LogOut
+    Log Out
   </Button>
 );
 export default withFirebase(SignOutButton);

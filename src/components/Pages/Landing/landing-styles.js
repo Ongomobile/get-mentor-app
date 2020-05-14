@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import * as COLORS from '../../../constants/colors';
 
-export const linkStyle = { color: 'black' };
 export const btnOveride = { margin: '0' };
+
 export const inverseBtnOveride = {
   width: 340,
   fontSize: 14,

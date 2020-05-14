@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import { ReactComponent as FooterLogo } from '../../assets/svgs/logo-namjai.svg';
+import { LinkStyle } from '../UI_Components/Link';
 import {
   FooterWrapper,
   FooterNavContainer,
@@ -21,22 +22,19 @@ const Footer = () => {
           </FooterLogoWrapper>
           <FooterNavLinks>
             <FooterLink>
-              <Link style={linkStyle} to={ROUTES.MENTORS}>
-                {' '}
+              <LinkStyle setHoverColor="white" to={ROUTES.MENTORS}>
                 Mentors
-              </Link>
+              </LinkStyle>
             </FooterLink>
             <FooterLink>
-              <Link style={linkStyle} to={ROUTES.FAQ}>
-                {' '}
+              <LinkStyle setHoverColor="white" to={ROUTES.FAQ}>
                 FAQs
-              </Link>
+              </LinkStyle>
             </FooterLink>
             <FooterLink>
-              <Link style={linkStyle} to={ROUTES.ABOUT}>
-                {' '}
+              <LinkStyle setHoverColor="white" to={ROUTES.ABOUT}>
                 About us
-              </Link>
+              </LinkStyle>
             </FooterLink>
           </FooterNavLinks>
         </FooterNavContainer>

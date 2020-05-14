@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as ROUTES from '../../../constants/routes';
 import Button from '../../UI_Components/Button';
 import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
 import LovingDude from '../../../assets/svgs/loving.svg';
 import StyledCard from '../../UI_Components/Card';
+import { LinkStyle } from '../../UI_Components/Link';
 import {
   HeroContainer,
   HeroContentRight,
@@ -16,7 +16,6 @@ import {
   LandingMentorsContainer,
   MentorsHeading,
   MentorsWrapper,
-  TempMentor,
   MentorsBtnWrapper,
   inverseBtnOveride,
   LandingText,
@@ -34,16 +33,13 @@ const LandingPage = () => (
           it. And all for free.
         </LandingText>
         <Button style={inverseBtnOveride} inverse big hidemobile>
-          <Link style={linkStyle} to={ROUTES.SIGN_UP}>
+          <LinkStyle to={ROUTES.SIGN_UP}>
             {' '}
             Register me to start mentoring or ask for help
-          </Link>
+          </LinkStyle>
         </Button>
         <Button primary hidedesktop style={btnOveride}>
-          <Link style={linkStyle} to={ROUTES.SIGN_UP}>
-            {' '}
-            Register Me
-          </Link>
+          <LinkStyle to={ROUTES.SIGN_UP}>Register Me</LinkStyle>
         </Button>
       </HeroContentLeft>
       <HeroContentRight>
@@ -59,7 +55,9 @@ const LandingPage = () => (
         <StyledCard />
       </MentorsWrapper>
       <MentorsBtnWrapper>
-        <Button inverse>See All Mentors</Button>
+        <Button inverse>
+          <LinkStyle to={ROUTES.MENTORS}>See All Mentors</LinkStyle>
+        </Button>
       </MentorsBtnWrapper>
     </LandingMentorsContainer>
   </PageContainer>
