@@ -23,19 +23,17 @@ const PasswordChangeForm = (props) => {
       .catch((error) => {
         setError({ error });
       });
-
-    event.preventDefault();
   };
 
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
+  const handlePassword = (event) => {
+    setPassword(event.target.value);
   };
 
   const togglePasswordVisiblity = () => {
     setShowPassword(!showPassword);
   };
   return (
-    <form onSubmit={onSubmit}>
+    <form>
       <PasswordWrapper>
         <InputFloatLabel
           name="password"
@@ -49,6 +47,7 @@ const PasswordChangeForm = (props) => {
       <Button primary onClick={() => onSubmit()}>
         Reset password
       </Button>
+      {error && <p>{error.message}</p>}
     </form>
   );
 };

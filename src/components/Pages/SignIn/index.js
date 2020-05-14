@@ -89,7 +89,8 @@ const SignInFormBase = (props) => {
       .catch((error) => {
         //CHANGE 6  set the error state
         // this.setState({ error });
-        setError({ error });
+        console.log(error);
+        setError(error);
       });
 
     event.preventDefault();
@@ -149,6 +150,7 @@ const SignInFormBase = (props) => {
         <Button disabled={isInvalid} primary type="submit">
           Sign In
         </Button>
+        {error && <p>{error.message}</p>}
         <StyledSpan>Or</StyledSpan>
         <SignInGoogle />
         {error && <p>{error.message}</p>}
