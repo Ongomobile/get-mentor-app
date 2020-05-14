@@ -48,7 +48,8 @@ export const StyledButton = styled.button`
   }}
 
   &:hover {
-    background-color: rgb(128, 181, 250);
+    background-color: ${COLORS.DARKGREY};
+    color: white;
   }
 
   &:disabled {
