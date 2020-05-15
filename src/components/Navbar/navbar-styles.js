@@ -73,7 +73,3 @@ export const MobileSignInWrapper = styled.div`
 export const regBtnStyle = {
   marginLeft: 31,
 };
-
-export const logInStyle = {
-  color: COLORS.PRIMARY,
-};

@@ -15,9 +15,7 @@ import {
   NavLinkWrapper,
   MobileLogoWrapper,
   MobileSignInWrapper,
-  linkStyle,
   regBtnStyle,
-  logInStyle,
 } from './navbar-styles';
 import SignOutButton from '../SignOut';
 

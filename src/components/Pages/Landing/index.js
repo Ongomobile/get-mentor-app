@@ -55,7 +55,7 @@ const LandingPage = () => (
         <StyledCard />
       </MentorsWrapper>
       <MentorsBtnWrapper>
-        <Button inverse>
+        <Button style={{ height: '78%' }} inverse>
           <LinkStyle setHoverColor="white" to={ROUTES.MENTORS}>
             See All Mentors
           </LinkStyle>
