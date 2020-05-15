@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card';
 import Avatar from '../Avatar';
-import { StyledParargaph, StyledParagraph } from '../Paragraph';
+import { StyledParagraph } from '../Paragraph';
 import Button from '../Button';
 import { ButtonWrapper } from './user-card-styles';
 
