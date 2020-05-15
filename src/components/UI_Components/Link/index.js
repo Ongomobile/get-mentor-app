@@ -6,6 +6,5 @@ export const LinkStyle = styled(Link)`
   color: ${(props) => props.setColor || `${COLORS.BLACK}`};
   &:hover {
     color: ${(props) => props.setHoverColor || `${COLORS.PRIMARY}`};
-    border: none;
   }
 `;

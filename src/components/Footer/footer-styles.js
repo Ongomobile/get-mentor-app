@@ -2,14 +2,9 @@ import styled from 'styled-components';
 import * as COLORS from '../../constants/colors';
 
 export const FooterWrapper = styled.div`
-  position: fixed;
-  top: auto;
-  bottom: 0;
-  left: 0;
   min-height: 100px;
   max-height: 15%;
   width: 100%;
-  z-index: 1001;
   background-color: ${(props) =>
     props.primary ? COLORS.PRIMARY : '#ffffff'};
 

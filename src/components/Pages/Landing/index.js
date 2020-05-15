@@ -6,6 +6,7 @@ import Heading from '../../UI_Components/Heading';
 import LovingDude from '../../../assets/svgs/loving.svg';
 import StyledCard from '../../UI_Components/Card';
 import { LinkStyle } from '../../UI_Components/Link';
+import * as COLORS from '../../../constants/colors';
 import {
   HeroContainer,
   HeroContentRight,
@@ -33,8 +34,7 @@ const LandingPage = () => (
           it. And all for free.
         </LandingText>
         <Button style={inverseBtnOveride} inverse big hidemobile>
-          <LinkStyle to={ROUTES.SIGN_UP}>
-            {' '}
+          <LinkStyle setHoverColor="white" to={ROUTES.SIGN_UP}>
             Register me to start mentoring or ask for help
           </LinkStyle>
         </Button>
@@ -56,7 +56,9 @@ const LandingPage = () => (
       </MentorsWrapper>
       <MentorsBtnWrapper>
         <Button inverse>
-          <LinkStyle to={ROUTES.MENTORS}>See All Mentors</LinkStyle>
+          <LinkStyle setHoverColor="white" to={ROUTES.MENTORS}>
+            See All Mentors
+          </LinkStyle>
         </Button>
       </MentorsBtnWrapper>
     </LandingMentorsContainer>
