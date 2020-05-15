@@ -6,5 +6,4 @@ export const AccountContent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 15%;
-  background-color: red;
 `;
