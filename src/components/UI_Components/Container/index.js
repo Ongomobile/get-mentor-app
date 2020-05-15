@@ -27,14 +27,11 @@ export const Container = styled.div`
   ${media.custom1`
     padding-top: 60px;
     padding-bottom:20%;
-    height:135vh;
+    height:150vh;
     
   `}
  ${media.mdPhPort`
     margin-top: 25%;
    height:1100px;
   `}
- /* ${media.smPhPort`
-  
- `} */
 `;
