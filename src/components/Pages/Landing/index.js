@@ -5,7 +5,7 @@ import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
 import LovingDude from '../../../assets/svgs/loving.svg';
 import { LinkStyle } from '../../UI_Components/Link';
-import UserCard from '../../UI_Components/MentorCard';
+import UserCard from '../../UI_Components/UserCard';
 import * as COLORS from '../../../constants/colors';
 import { StyledParagraph } from '../../UI_Components/Paragraph';
 import {
