@@ -1,14 +1,12 @@
 import React from 'react';
-import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
+import { FaqContent } from './faq-styles';
 
 const FaqPage = () => {
   return (
-    <div>
-      <PageContainer>
-        <Heading h1>Faq Page</Heading>
-      </PageContainer>
-    </div>
+    <FaqContent>
+      <Heading h1>Faq Page</Heading>
+    </FaqContent>
   );
 };
 

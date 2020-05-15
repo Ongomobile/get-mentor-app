@@ -8,11 +8,11 @@ import {
 } from '../../Session';
 import * as ROLES from '../../../constants/roles';
 import * as ROUTES from '../../../constants/routes';
-import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
+import { AdminContent } from './admin-styles';
 
 const AdminPage = () => (
-  <PageContainer>
+  <AdminContent>
     <Heading h1>Admin</Heading>
     <p>The Admin Page is accessible by signed in Admins.</p>
 
@@ -20,7 +20,7 @@ const AdminPage = () => (
       <Route exact path={ROUTES.USER_DETAILS} component={UserItem} />
       <Route exact path={ROUTES.ADMIN} component={UserList} />
     </Switch>
-  </PageContainer>
+  </AdminContent>
 );
 
 class UserListBase extends Component {

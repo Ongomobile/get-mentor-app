@@ -1,7 +1,6 @@
 import React from 'react';
 import * as ROUTES from '../../../constants/routes';
 import Button from '../../UI_Components/Button';
-import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
 import LovingDude from '../../../assets/svgs/loving.svg';
 import { LinkStyle } from '../../UI_Components/Link';
@@ -34,7 +33,7 @@ const callAlert = () => {
 // End Temp content
 
 const LandingPage = () => (
-  <PageContainer>
+  <>
     <HeroContainer>
       <HeroContentLeft>
         <Heading h1>Connecting people to improve their lives</Heading>
@@ -97,7 +96,7 @@ const LandingPage = () => (
         </Button>
       </MentorsBtnWrapper>
     </LandingMentorsContainer>
-  </PageContainer>
+  </>
 );
 
 export default LandingPage;

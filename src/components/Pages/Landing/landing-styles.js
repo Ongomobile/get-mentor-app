@@ -17,6 +17,7 @@ export const HeroContainer = styled.div`
   justify-content: space-between;
   padding-bottom: 70px;
   max-width: 100vw;
+
   @media screen and (max-width: 1100px) {
     margin-top: 5%;
   }
@@ -59,7 +60,6 @@ export const HeroImgWrapper = styled.img`
 
 export const LandingMentorsContainer = styled.div`
   background-color: #f0f4f7;
-  margin-bottom: 115px;
   margin-left: -4.5%;
   margin-right: -4.5%;
   padding: 50px;

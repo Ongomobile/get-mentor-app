@@ -6,7 +6,7 @@ import {
   withAuthorization,
   withEmailVerification,
 } from '../../Session';
-import PageContainer from '../../PageContainer';
+import { AccountContent } from './account-styles';
 import ProfileForm from '../../UI_Components/ProfileForm';
 import Heading from '../../UI_Components/Heading';
 
@@ -37,13 +37,13 @@ const AccountPage = (props) => {
   return (
     <AuthUserContext.Consumer>
       {(authUser) => (
-        <PageContainer>
+        <AccountContent>
           <Heading h1>Profile</Heading>
           <ProfileForm
             handleSaveClick={handleSaveClick}
             user={authUser}
           />
-        </PageContainer>
+        </AccountContent>
       )}
     </AuthUserContext.Consumer>
   );

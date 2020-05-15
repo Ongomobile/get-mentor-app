@@ -8,20 +8,17 @@ import {
 } from '../../Session';
 
 import { HomeContent } from './home-styles';
-import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
 
 const HomePage = () => {
   return (
     <div>
-      <PageContainer>
-        <HomeContent>
-          <Heading h1>
-            Home Page is accessible by signed in user
-          </Heading>
-          <HelpRequests />
-        </HomeContent>
-      </PageContainer>
+      <HomeContent>
+        <Heading h1>
+          Home Page is accessible by signed in user
+        </Heading>
+        <HelpRequests />
+      </HomeContent>
     </div>
   );
 };

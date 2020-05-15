@@ -7,8 +7,8 @@ export const Container = styled.div`
   margin-top: ${(props) => props.setMarTop || '8%'};
   padding-left: ${(props) => props.setPadLeft || '4.2%'};
   padding-right: ${(props) => props.setPadRight || '4.2%'};
- 
-  ${media.lgDesktop`
+
+ ${media.lgDesktop`
      margin-left:auto;
      margin-right:auto;
      max-width:1920px;
@@ -25,10 +25,16 @@ export const Container = styled.div`
   `}
   
   ${media.custom1`
-    margin-top: 20%;
+    padding-top: 60px;
+    padding-bottom:20%;
+    height:135vh;
+    
   `}
-
-  ${media.mdPhPort`
+ ${media.mdPhPort`
     margin-top: 25%;
+   height:1100px;
   `}
+ /* ${media.smPhPort`
+  
+ `} */
 `;
