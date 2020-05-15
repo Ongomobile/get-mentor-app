@@ -3,14 +3,12 @@ import { withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 import { SignUpLink } from '../SignUp';
 import { PasswordForgetLink } from '../../PasswordForget';
-
 import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
 import {
   SignInWrapper,
   SignInFormWrapper,
   SignInContentWrapper,
-  SignInText,
   PasswordWrapper,
   StyledSpan,
   GoogleSignInBtn,
@@ -19,6 +17,8 @@ import {
   SignInImg,
   hdOveride,
 } from './sign-styles';
+import * as COLORS from '../../../constants/colors';
+import { StyledParagraph } from '../../UI_Components/Paragraph';
 import InputFloatLabel from '../../UI_Components/Input';
 import { EyeIconImg } from '../SignUp/signup-styles';
 import EyeIcon from '../../../assets/images/eye.png';
@@ -120,12 +120,12 @@ const SignInFormBase = (props) => {
         <Heading style={hdOveride} h1>
           Log in
         </Heading>
-        <SignInText>
+        <StyledParagraph setColor={`${COLORS.MEDIUMGREY}`}>
           Welcome back to Namjai!
           <br />
           Remember that you can always switch between mentor or user
           role in your profile panel.
-        </SignInText>
+        </StyledParagraph>
         <InputFloatLabel
           name="email"
           label="Email"

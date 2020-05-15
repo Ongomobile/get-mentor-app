@@ -71,13 +71,6 @@ export const StyledSpan = styled.span`
   margin-top: 40px;
 `;
 
-export const SignInText = styled.p`
-  color: ${COLORS.MEDIUMGREY};
-  line-height: 1.4;
-  font-size: 20px;
-  font-family: Inter;
-`;
-
 export const signBtnStyle = {
   height: '60px',
 };

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as COLORS from '../../../constants/colors';
 
 export const SignUpWrapper = styled.div`
   display: flex;
@@ -89,9 +88,6 @@ export const GoogleBtnWrapper = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 40px;
-`;
-export const SignUpText = styled.p`
-  color: ${COLORS.MEDIUMGREY};
 `;
 
 export const regBtnStyle = {

@@ -32,6 +32,7 @@ import RegisterSvg from '../../../assets/svgs/REGISTER.svg';
 import usePasswordValidator from '../../PasswordValidator';
 import Button from '../../UI_Components/Button';
 import Heading from '../../UI_Components/Heading';
+import { StyledParagraph } from '../../UI_Components/Paragraph';
 
 const SignUpPage = () => (
   <div>
@@ -135,10 +136,10 @@ const SignUpHooks = (props) => {
         <Heading h1 style={hdOveride}>
           Register
         </Heading>
-        <SignUpText>
+        <StyledParagraph setColor={`${COLORS.MEDIUMGREY}`}>
           Fill in the form below to be a mentor, or to seek help. It’s
           free Forever.
-        </SignUpText>
+        </StyledParagraph>
         <InputFloatLabel
           name="email"
           label="Email"

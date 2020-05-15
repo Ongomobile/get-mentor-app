@@ -4,14 +4,14 @@ import Button from '../../UI_Components/Button';
 import PageContainer from '../../PageContainer';
 import Heading from '../../UI_Components/Heading';
 import LovingDude from '../../../assets/svgs/loving.svg';
-import StyledCard from '../../UI_Components/Card';
 import { LinkStyle } from '../../UI_Components/Link';
+import UserCard from '../../UI_Components/MentorCard';
 import * as COLORS from '../../../constants/colors';
+import { StyledParagraph } from '../../UI_Components/Paragraph';
 import {
   HeroContainer,
   HeroContentRight,
   HeroContentLeft,
-  linkStyle,
   HeroImgWrapper,
   btnOveride,
   LandingMentorsContainer,
@@ -19,20 +19,31 @@ import {
   MentorsWrapper,
   MentorsBtnWrapper,
   inverseBtnOveride,
-  LandingText,
 } from './landing-styles';
+
+//These are just for temporary placeholder  mentor content
+const tempDes = `Responsible + Regenerative business incl. B-Corp Assessment / Certification and Systems Thinking, Consumer Insight (qual, quant, ethno), Strategy, Freelance life and chit chat" 
+`;
+const maryaPicUrl = `https://firebasestorage.googleapis.com/v0/b/get-mentor.appspot.com/o/images%2Fmarya.png?alt=media&token=3f14923a-7bad-494e-bce8-56f5a4fa6b34`;
+const michellUrl = `https://firebasestorage.googleapis.com/v0/b/get-mentor.appspot.com/o/images%2Fmitchell.png?alt=media&token=b5e45120-49b3-4095-b825-45f05702c1ce`;
+const arleneUrl = `https://firebasestorage.googleapis.com/v0/b/get-mentor.appspot.com/o/images%2FArlene.png?alt=media&token=b38f6dd2-620b-41cc-b3cc-b472bb99732d`;
+const markUrl = `https://firebasestorage.googleapis.com/v0/b/get-mentor.appspot.com/o/images%2FMark.png?alt=media&token=5c969ea0-c4bb-4198-8e93-45e57a7876ce`;
+const callAlert = () => {
+  alert('This is just placeholder content');
+};
+// End Temp content
 
 const LandingPage = () => (
   <PageContainer>
     <HeroContainer>
       <HeroContentLeft>
         <Heading h1>Connecting people to improve their lives</Heading>
-        <LandingText>
+        <StyledParagraph setColor={`${COLORS.MEDIUMGREY}`}>
           Do you want be a Mentor? Or do you need help with something?
           Maybe both? This is the place for you. We connect people
           that just look to help eachother for the pleasure of doing
           it. And all for free.
-        </LandingText>
+        </StyledParagraph>
         <Button style={inverseBtnOveride} inverse big hidemobile>
           <LinkStyle setHoverColor="white" to={ROUTES.SIGN_UP}>
             Register me to start mentoring or ask for help
@@ -49,10 +60,34 @@ const LandingPage = () => (
     <LandingMentorsContainer>
       <MentorsHeading>Our New Mentors</MentorsHeading>
       <MentorsWrapper>
-        <StyledCard />
-        <StyledCard />
-        <StyledCard />
-        <StyledCard />
+        <UserCard
+          name="Marya Antonia Fontsweizzer"
+          title="CEO Friend.ly"
+          description={tempDes}
+          url={maryaPicUrl}
+          handleClick={callAlert}
+        />
+        <UserCard
+          name="Mitchell Russell"
+          title="Gillette"
+          description={tempDes}
+          url={michellUrl}
+          handleClick={callAlert}
+        />
+        <UserCard
+          name="Arlene Pena"
+          title="Apple"
+          description={tempDes}
+          url={arleneUrl}
+          handleClick={callAlert}
+        />
+        <UserCard
+          name="Mark Simmmons"
+          title="Louis Vuitton"
+          description={tempDes}
+          url={markUrl}
+          handleClick={callAlert}
+        />
       </MentorsWrapper>
       <MentorsBtnWrapper>
         <Button style={{ height: '78%' }} inverse>
