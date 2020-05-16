@@ -22,17 +22,17 @@ const Footer = () => {
           </FooterLogoWrapper>
           <FooterNavLinks>
             <FooterLink>
-              <LinkStyle setHoverColor="white" to={ROUTES.MENTORS}>
+              <LinkStyle sethovercolor="white" to={ROUTES.MENTORS}>
                 Mentors
               </LinkStyle>
             </FooterLink>
             <FooterLink>
-              <LinkStyle setHoverColor="white" to={ROUTES.FAQ}>
+              <LinkStyle sethovercolor="white" to={ROUTES.FAQ}>
                 FAQs
               </LinkStyle>
             </FooterLink>
             <FooterLink>
-              <LinkStyle setHoverColor="white" to={ROUTES.ABOUT}>
+              <LinkStyle sethovercolor="white" to={ROUTES.ABOUT}>
                 About us
               </LinkStyle>
             </FooterLink>
