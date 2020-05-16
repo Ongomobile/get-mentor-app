@@ -61,7 +61,7 @@ const NavigationAuth = ({ authUser }) => {
               <LinkStyle to={ROUTES.ACCOUNT}>Account</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
-              {!!authUser.roles[ROLES.MENTOR] && (
+              {!!authUser.roles[ROLES.ADMIN] && (
                 <LinkStyle to={ROUTES.ADMIN}>Admin</LinkStyle>
               )}
             </NavLinkWrapper>
