@@ -29,7 +29,6 @@ const MentorsPage = (props) => {
             />
           </SearchContent>
         </SearchBarWrapper>
-        <Heading h1>Mentors Page</Heading>
       </MentorsContent>
     </>
   );

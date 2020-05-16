@@ -16,26 +16,29 @@ import FaqPage from '../Pages/Faq';
 import LandingPage from '../Pages/Landing';
 import Footer from '../Footer';
 import Tabbar from '../Tabbar';
+import ScrollToTop from '../ScrollTop';
 
 const App = () => (
   <Router>
     <Navbar />
     <Tabbar />
-    <Container>
-      <Route exact path={ROUTES.LANDING} component={LandingPage} />
-      <Route path={ROUTES.HOME} component={HomePage} />
-      <Route path={ROUTES.MENTORS} component={MentorsPage} />
-      <Route path={ROUTES.SIGN_IN} component={SignInPage} />
-      <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
-      <Route
-        path={ROUTES.PASSWORD_FORGET}
-        component={PasswordForgetPage}
-      />
-      <Route path={ROUTES.ACCOUNT} component={AccountPage} />
-      <Route path={ROUTES.ADMIN} component={AdminPage} />
-      <Route path={ROUTES.ABOUT} component={AboutPage} />
-      <Route path={ROUTES.FAQ} component={FaqPage} />
-    </Container>
+    <ScrollToTop>
+      <Container>
+        <Route exact path={ROUTES.LANDING} component={LandingPage} />
+        <Route path={ROUTES.HOME} component={HomePage} />
+        <Route path={ROUTES.MENTORS} component={MentorsPage} />
+        <Route path={ROUTES.SIGN_IN} component={SignInPage} />
+        <Route path={ROUTES.SIGN_UP} component={SignUpPage} />
+        <Route
+          path={ROUTES.PASSWORD_FORGET}
+          component={PasswordForgetPage}
+        />
+        <Route path={ROUTES.ACCOUNT} component={AccountPage} />
+        <Route path={ROUTES.ADMIN} component={AdminPage} />
+        <Route path={ROUTES.ABOUT} component={AboutPage} />
+        <Route path={ROUTES.FAQ} component={FaqPage} />
+      </Container>
+    </ScrollToTop>
     <Footer />
   </Router>
 );
