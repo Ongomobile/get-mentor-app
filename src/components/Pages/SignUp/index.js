@@ -22,7 +22,6 @@ import {
   ContentWrapper,
   GoogleBtnWrapper,
   ImgWrapper,
-  SignUpText,
   regBtnStyle,
   hdOveride,
 } from './signup-styles';
@@ -178,6 +177,7 @@ const SignUpHooks = (props) => {
         <Button style={regBtnStyle} primary type="submit">
           Register me!
         </Button>
+        {error && <p>{error.message}</p>}
         <span style={{ textAlign: 'center', marginTop: 40 }}>Or</span>
         <SignUpGoogle />
       </FormWrapper>
@@ -205,11 +205,11 @@ const SignUpGoogleBase = (props) => {
         setError(null);
         props.history.push(ROUTES.HOME);
       })
-      .catch((error) => {
-        if (error.code === ERROR_CODE_ACCOUNT_EXISTS) {
-          error.message = ERROR_MSG_ACCOUNT_EXISTS;
+      .catch((err) => {
+        if (err.code === ERROR_CODE_ACCOUNT_EXISTS) {
+          err.message = ERROR_MSG_ACCOUNT_EXISTS;
         }
-        setError(error);
+        setError(err);
       });
   };
   const handleGoogleClicked = () => {

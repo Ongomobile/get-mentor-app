@@ -16,6 +16,7 @@ import {
   ImgWrapper,
   SignInImg,
   hdOveride,
+  Errors,
 } from './sign-styles';
 import * as COLORS from '../../../constants/colors';
 import { StyledParagraph } from '../../UI_Components/Paragraph';
@@ -150,10 +151,10 @@ const SignInFormBase = (props) => {
         <Button disabled={isInvalid} primary type="submit">
           Sign In
         </Button>
-        {error && <p>{error.message}</p>}
+        {error && <Errors>{error.message}</Errors>}
         <StyledSpan>Or</StyledSpan>
         <SignInGoogle />
-        {error && <p>{error.message}</p>}
+        {error && <Errors>{error.message}</Errors>}
         <SignUpLink />
       </SignInFormWrapper>
       <ImgWrapper>
@@ -172,8 +173,13 @@ const SignInGoogleBase = (props) => {
       .then((socialAuthUser) => {
         // Create a user in your Firebase Realtime Database too
         return props.firebase.user(socialAuthUser.user.uid).set({
-          username: socialAuthUser.user.displayName,
+          username: socialAuthUser.user.username,
           email: socialAuthUser.user.email,
+          name: socialAuthUser.user.name,
+          description: socialAuthUser.user.description,
+          mentor: socialAuthUser.user.mentor,
+          tags: socialAuthUser.user.tags,
+          imgUrl: socialAuthUser.user.imgUrl,
           roles: {},
         });
       })

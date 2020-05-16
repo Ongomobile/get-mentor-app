@@ -78,3 +78,8 @@ export const signBtnStyle = {
 export const hdOveride = {
   marginLeft: '-3px',
 };
+
+export const Errors = styled.p`
+  color: tomato;
+  font-size: 20px;
+`;
