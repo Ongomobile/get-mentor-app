@@ -41,12 +41,10 @@ export const MentorCardWrapper = styled.div`
   padding-top: 7.8%;
   padding-bottom: 7.8%;
   height: 80%;
-  min-height: 80%;
 
   ${media.custom1`
      height:auto;
      margin-bottom: 80px;
-     min-height:auto;
      padding-top:10%;
      padding-bottom:10%;
   `}
