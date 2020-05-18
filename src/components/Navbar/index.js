@@ -100,7 +100,7 @@ const NavigationNonAuth = () => {
               <LinkStyle to={ROUTES.SIGN_IN}>Log In</LinkStyle>
             </NavLinkWrapper>
             <Button primary style={regBtnStyle}>
-              <LinkStyle setHoverColor="white" to={ROUTES.SIGN_UP}>
+              <LinkStyle sethovercolor="white" to={ROUTES.SIGN_UP}>
                 Register
               </LinkStyle>
             </Button>

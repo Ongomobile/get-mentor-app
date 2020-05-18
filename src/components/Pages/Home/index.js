@@ -53,11 +53,11 @@ const RequestsBase = (props) => {
 
   const RequestList = ({ helpRequests }) => {
     return (
-      <ul>
+      <ol>
         {helpRequests.map((request) => (
           <RequestItem key={request.uid} request={request} />
         ))}
-      </ul>
+      </ol>
     );
   };
 

@@ -44,7 +44,7 @@ const LandingPage = () => (
           it. And all for free.
         </StyledParagraph>
         <Button style={inverseBtnOveride} inverse big hidemobile>
-          <LinkStyle setHoverColor="white" to={ROUTES.SIGN_UP}>
+          <LinkStyle sethovercolor="white" to={ROUTES.SIGN_UP}>
             Register me to start mentoring or ask for help
           </LinkStyle>
         </Button>

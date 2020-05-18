@@ -30,6 +30,7 @@ const ProfileForm = (props) => {
     userId: props.user.uid,
     username: props.user.username || '',
     name: props.user.name || '',
+    title: props.user.title || '',
     email: props.user.email || '',
     description: props.user.description || '',
     mentor: props.user.mentor || false,
@@ -178,6 +179,13 @@ const ProfileForm = (props) => {
             label="Name"
             type="text"
             value={profileDetails.name}
+            onChange={handleDetails}
+          />
+          <InputFloatLabel
+            name="title"
+            label="Title"
+            type="text"
+            value={profileDetails.title}
             onChange={handleDetails}
           />
           <InputFloatLabel

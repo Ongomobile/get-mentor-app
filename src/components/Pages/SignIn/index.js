@@ -176,6 +176,7 @@ const SignInGoogleBase = (props) => {
           username: socialAuthUser.user.username,
           email: socialAuthUser.user.email,
           name: socialAuthUser.user.name,
+          title: socialAuthUser.user.title,
           description: socialAuthUser.user.description,
           mentor: socialAuthUser.user.mentor,
           tags: socialAuthUser.user.tags,

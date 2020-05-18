@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 export const ButtonWrapper = styled.div`
-  margin-top: 13px;
-  float: right;
+  position: absolute;
+  bottom: 24px;
+  left: auto;
+  right: 24px;
+  top: auto;
+`;
+
+export const TextWrapper = styled.div`
+  height: 65px;
+  max-height: 65px;
+  margin-bottom: 75px;
 `;

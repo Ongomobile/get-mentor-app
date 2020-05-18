@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const StyledCard = styled.div`
+  position: relative;
   height: ${(props) => props.setHeight || '100%'};
-  max-height: ${(props) => props.setMaxHeight || '400px'};
+  max-height: ${(props) => props.setMaxHeight || '286px'};
   width: ${(props) => props.setWidth || '315px'};
   margin: ${(props) => props.setMargin || '10px'};
   padding: ${(props) => props.setPadding || '24px'};

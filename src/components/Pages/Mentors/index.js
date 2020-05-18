@@ -12,9 +12,9 @@ import Loader from '../../UI_Components/Loader';
 import UserCard from '../../UI_Components/UserCard';
 
 const MentorsPage = (props) => {
+  const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
   const [mentors, setMentors] = useState([]);
-
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
@@ -30,7 +30,8 @@ const MentorsPage = (props) => {
         }));
         userList.forEach((user) => {
           if (user.mentor) {
-            setMentors(user);
+            setMentors((mentors) => [...mentors, user]);
+            setLoading(false);
           }
         });
       }
@@ -38,8 +39,9 @@ const MentorsPage = (props) => {
   };
 
   useEffect(() => {
+    setLoading(true);
     getMentors(props);
-  }, [props]);
+  }, [props.firebase.users]);
 
   return (
     <>
@@ -56,7 +58,20 @@ const MentorsPage = (props) => {
             />
           </SearchContent>
         </SearchBarWrapper>
-        <MentorCardWrapper></MentorCardWrapper>
+        <MentorCardWrapper>
+          {loading && <Loader />}
+          {mentors.map((mentor) => {
+            return (
+              <UserCard
+                key={mentor.uid}
+                url={mentor.imgUrl}
+                name={mentor.name}
+                description={mentor.description}
+                title={mentor.title}
+              />
+            );
+          })}
+        </MentorCardWrapper>
       </MentorsContent>
     </>
   );

@@ -23,6 +23,7 @@ const AccountPage = (props) => {
       .set({
         username: data.username,
         name: data.name,
+        title: data.title,
         email: data.email,
         description: data.description,
         mentor: data.mentor,

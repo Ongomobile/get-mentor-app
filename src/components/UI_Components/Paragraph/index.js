@@ -6,4 +6,5 @@ export const StyledParagraph = styled.p`
   line-height: ${(props) => props.setLineHeight || 1.4};
   font-size: ${(props) => props.setFontSize || '20px'};
   font-family: ${(props) => props.setFontFamily || 'Inter'};
+  margin: ${(props) => props.setMargin || '0 0 0 0'};
 `;
