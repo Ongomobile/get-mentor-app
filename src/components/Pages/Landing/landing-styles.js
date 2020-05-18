@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import * as COLORS from '../../../constants/colors';
 
 export const btnOveride = { margin: '0' };
 
@@ -59,7 +60,7 @@ export const HeroImgWrapper = styled.img`
 `;
 
 export const LandingMentorsContainer = styled.div`
-  background-color: #f0f4f7;
+  background-color: ${COLORS.OFFWHITE};
   margin-left: -4.5%;
   margin-right: -4.5%;
   padding: 50px;

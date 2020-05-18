@@ -30,3 +30,13 @@ export const SearchContent = styled.div`
   flex-direction: column;
   height: 107px;
 `;
+
+export const MentorCardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: ${COLORS.OFFWHITE};
+  height: 100%;
+  margin-left: -5%;
+  margin-right: -5%;
+`;
