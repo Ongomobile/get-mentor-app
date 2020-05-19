@@ -5,7 +5,11 @@ import media from '../../UI_Components/Media';
 export const MentorsContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  height: 100vh;
+
+  ${media.rgTabPort`
+     height:auto;
+  `}
 `;
 
 export const SearchBarWrapper = styled.div`
@@ -40,6 +44,7 @@ export const MentorCardWrapper = styled.div`
   padding-top: 7.8%;
   padding-bottom: 7.8%;
   flex: 1;
+  /* height: 100vh; */
 
   ${media.custom1`
      padding-top:10%;
