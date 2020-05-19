@@ -9,9 +9,9 @@ function UserCard(props) {
   const { tags, description, url, name, title } = props;
   let userTags = null;
 
-  if (tags.length > 0) {
-    userTags = tags.join(', ');
-  }
+  // if (tags.length > 0) {
+  //   userTags = tags.join(', ');
+  // }
 
   return (
     <Card>
