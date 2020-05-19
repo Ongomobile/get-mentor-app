@@ -39,30 +39,6 @@ const MentorsPage = (props) => {
     });
   }, [props.firebase]);
 
-  // const getMentors = (props) => {
-  //   props.firebase.users().on('value', (snapshot) => {
-  //     const requestObject = snapshot.val();
-
-  //     if (requestObject) {
-  //       const userList = Object.keys(requestObject).map((key) => ({
-  //         ...requestObject[key],
-  //         uid: key,
-  //       }));
-  //       userList.forEach((user) => {
-  //         if (user.mentor) {
-  //           setMentors((mentors) => [...mentors, user]);
-  //           setLoading(false);
-  //         }
-  //       });
-  //     }
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   setLoading(true);
-  //   getMentors(props);
-  // }, [props.firebase.users]);
-
   return (
     <>
       <MentorsContent>

@@ -6,7 +6,6 @@ export const MentorsContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: 100vh;
 `;
 
 export const SearchBarWrapper = styled.div`
