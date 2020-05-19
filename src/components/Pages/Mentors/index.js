@@ -19,7 +19,8 @@ const MentorsPage = (props) => {
     setQuery(e.target.value);
   };
 
-  const getMentors = (props) => {
+  useEffect(() => {
+    setLoading(true);
     props.firebase.users().on('value', (snapshot) => {
       const requestObject = snapshot.val();
 
@@ -36,12 +37,31 @@ const MentorsPage = (props) => {
         });
       }
     });
-  };
+  }, [props.firebase]);
 
-  useEffect(() => {
-    setLoading(true);
-    getMentors(props);
-  }, [props.firebase.users]);
+  // const getMentors = (props) => {
+  //   props.firebase.users().on('value', (snapshot) => {
+  //     const requestObject = snapshot.val();
+
+  //     if (requestObject) {
+  //       const userList = Object.keys(requestObject).map((key) => ({
+  //         ...requestObject[key],
+  //         uid: key,
+  //       }));
+  //       userList.forEach((user) => {
+  //         if (user.mentor) {
+  //           setMentors((mentors) => [...mentors, user]);
+  //           setLoading(false);
+  //         }
+  //       });
+  //     }
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   getMentors(props);
+  // }, [props.firebase.users]);
 
   return (
     <>
