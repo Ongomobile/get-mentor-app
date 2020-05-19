@@ -7,12 +7,6 @@ import { ButtonWrapper, TextWrapper } from './user-card-styles';
 
 function UserCard(props) {
   const { tags, description, url, name, title } = props;
-  let userTags = null;
-
-  // if (tags.length > 0) {
-  //   userTags = tags.join(', ');
-  // }
-
   return (
     <Card>
       <Avatar url={url} name={name} title={title} />
@@ -23,7 +17,7 @@ function UserCard(props) {
           setFontWeight="bold"
           setFontSize="12px"
         >
-          {userTags}
+          {tags ? tags.join(', ') : null}
         </StyledParagraph>
         <StyledParagraph setFontSize="12px">
           {description}
