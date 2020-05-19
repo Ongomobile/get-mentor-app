@@ -6,13 +6,27 @@ import Button from '../Button';
 import { ButtonWrapper, TextWrapper } from './user-card-styles';
 
 function UserCard(props) {
+  const { tags, description, url, name, title } = props;
+  let userTags = null;
+
+  if (tags.length > 0) {
+    userTags = tags.join(', ');
+  }
+
   return (
     <Card>
-      <Avatar url={props.url} name={props.name} title={props.title} />
+      <Avatar url={url} name={name} title={title} />
       <p style={{ marginBottom: '10px' }}>Can help with</p>
       <TextWrapper>
+        <StyledParagraph
+          setMargin="0 0 10px 0"
+          setFontWeight="bold"
+          setFontSize="12px"
+        >
+          {userTags}
+        </StyledParagraph>
         <StyledParagraph setFontSize="12px">
-          {props.description}
+          {description}
         </StyledParagraph>
       </TextWrapper>
       <ButtonWrapper>

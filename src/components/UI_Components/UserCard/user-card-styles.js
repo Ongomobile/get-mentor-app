@@ -9,6 +9,6 @@ export const ButtonWrapper = styled.div`
 
 export const TextWrapper = styled.div`
   height: 65px;
-  max-height: 65px;
+  max-height: 125px;
   margin-bottom: 75px;
 `;
