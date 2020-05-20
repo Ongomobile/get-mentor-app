@@ -5,8 +5,10 @@ import media from '../../UI_Components/Media';
 export const MentorsContent = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   height: 100vh;
+  ${media.rgTabPort`
+     height:auto;
+  `}
 `;
 
 export const SearchBarWrapper = styled.div`
