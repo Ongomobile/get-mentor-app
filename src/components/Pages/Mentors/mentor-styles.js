@@ -6,6 +6,7 @@ export const MentorsContent = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+
   ${media.rgTabPort`
      height:auto;
   `}
@@ -43,7 +44,6 @@ export const MentorCardWrapper = styled.div`
   padding-top: 7.8%;
   padding-bottom: 7.8%;
   flex: 1;
-  /* height: 100vh; */
 
   ${media.custom1`
      padding-top:10%;

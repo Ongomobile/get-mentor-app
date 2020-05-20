@@ -19,8 +19,7 @@ const MentorsPage = (props) => {
     setQuery(e.target.value);
   };
 
-  useEffect(() => {
-    setLoading(true);
+  const getMentors = (props) => {
     props.firebase.users().on('value', (snapshot) => {
       const requestObject = snapshot.val();
 
@@ -37,17 +36,12 @@ const MentorsPage = (props) => {
         });
       }
     });
-  }, [props.firebase]);
-
-  const getUserTags = (user) => {
-    const tags = [];
-    let tagsObj = user.tags;
-    const tagList = Object.values(tagsObj);
-    tagList.forEach((tagText) => {
-      tags.push(tagText.text);
-    });
-    return tags;
   };
+
+  useEffect(() => {
+    setLoading(true);
+    getMentors(props);
+  }, [props.firebase.users]);
 
   return (
     <>
@@ -67,12 +61,6 @@ const MentorsPage = (props) => {
         <MentorCardWrapper>
           {loading && <Loader />}
           {mentors.map((mentor) => {
-            const userTags = [];
-            let tagsObj = mentor.tags;
-            const tagList = Object.values(tagsObj);
-            tagList.forEach((tagText) => {
-              userTags.push(tagText.text);
-            });
             return (
               <UserCard
                 key={mentor.uid}
@@ -80,7 +68,6 @@ const MentorsPage = (props) => {
                 name={mentor.name}
                 description={mentor.description}
                 title={mentor.title}
-                tags={userTags}
               />
             );
           })}

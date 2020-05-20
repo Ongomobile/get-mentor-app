@@ -15,7 +15,6 @@ const SearchInput = (props) => {
           onChange={props.onChange}
           value={props.value}
           name={props.name}
-          tabWidth={props.tabWidth}
         />
         <SearchIcon onClick={props.onClick} />
       </SearchWrapper>

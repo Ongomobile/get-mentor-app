@@ -68,7 +68,7 @@ const TagUi = (props) => {
       ...uiState,
       titles: currentTags,
     });
-  }, [currentTags, uiState]);
+  }, []);
 
   const addTitle = (title) => {
     const uniqid = () => Math.random().toString(36).substr(2, 9);

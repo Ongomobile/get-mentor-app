@@ -45,7 +45,7 @@ const RequestsBase = (props) => {
         setLoading(false);
       }
     });
-  }, [props.firebase]);
+  }, []);
 
   useEffect(() => {
     props.firebase.helpRequest().off();
