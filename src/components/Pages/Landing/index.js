@@ -90,7 +90,11 @@ const LandingPage = () => (
       </MentorsWrapper>
       <MentorsBtnWrapper>
         <Button style={{ height: '78%' }} inverse>
+<<<<<<< HEAD
           <LinkStyle sethovercolor="white" to={ROUTES.MENTORS}>
+=======
+          <LinkStyle setcovercolor="white" to={ROUTES.MENTORS}>
+>>>>>>> bd1c1f006642cf1189bb0e4738e48dc48c3949fa
             See All Mentors
           </LinkStyle>
         </Button>

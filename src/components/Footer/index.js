@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 import { ReactComponent as FooterLogo } from '../../assets/svgs/logo-namjai.svg';
 import { LinkStyle } from '../UI_Components/Link';
@@ -9,7 +8,6 @@ import {
   FooterLogoWrapper,
   FooterNavLinks,
   FooterLink,
-  linkStyle,
 } from './footer-styles';
 
 const Footer = () => {

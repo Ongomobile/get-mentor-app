@@ -43,6 +43,7 @@ export const MentorCardWrapper = styled.div`
   padding-top: 7.8%;
   padding-bottom: 7.8%;
   flex: 1;
+  /* height: 100vh; */
 
   ${media.custom1`
      padding-top:10%;
