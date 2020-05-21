@@ -37,15 +37,30 @@ const AccountPage = (props) => {
   };
   return (
     <AuthUserContext.Consumer>
-      {(authUser) => (
-        <AccountContent>
-          <Heading h1>Profile</Heading>
-          <ProfileForm
-            handleSaveClick={handleSaveClick}
-            user={authUser}
-          />
-        </AccountContent>
-      )}
+      {(authUser) => {
+        const userDetails = {
+          id: authUser.uid,
+          username: authUser.username,
+          name: authUser.name,
+          title: authUser.title,
+          email: authUser.email,
+          description: authUser.description,
+          mentor: authUser.mentor,
+          imgUrl: authUser.imgUrl,
+          tags: authUser.tags,
+          roles: authUser.roles,
+        };
+
+        return (
+          <AccountContent>
+            <Heading h1>Profile</Heading>
+            <ProfileForm
+              handleSaveClick={handleSaveClick}
+              user={userDetails}
+            />
+          </AccountContent>
+        );
+      }}
     </AuthUserContext.Consumer>
   );
 };

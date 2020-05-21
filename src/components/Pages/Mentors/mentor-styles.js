@@ -8,7 +8,7 @@ export const MentorsContent = styled.div`
   height: 100vh;
 
   ${media.rgTabPort`
-     height:auto;
+     min-height:1024px;
   `}
 `;
 

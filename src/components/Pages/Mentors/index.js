@@ -43,6 +43,10 @@ const MentorsPage = (props) => {
     getMentors(props);
   }, [props.firebase.users]);
 
+  useEffect(() => {
+    props.firebase.users().off();
+  });
+
   return (
     <>
       <MentorsContent>

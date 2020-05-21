@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import * as COLORS from '../../constants/colors';
 
 export const Header = styled.header`
   position: fixed;
@@ -12,17 +11,18 @@ export const Header = styled.header`
   z-index: 600;
   background-color: white;
 
-  /* medaia queries */
   @media screen and (max-width: 600px) {
     display: none;
   }
 `;
+
 export const NavContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0 4.2% 0 4.2%;
 `;
+
 export const LogoWrapper = styled.div`
   margin-top: 26px;
   @media screen and (max-width: 600px) {

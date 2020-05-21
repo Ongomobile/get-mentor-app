@@ -27,7 +27,7 @@ const ProfileForm = (props) => {
   const [isMentor, setIsMentor] = useState(false);
   const [checked, setChecked] = useState(false);
   const [profileDetails, setProfileDetails] = useState({
-    userId: props.user.uid,
+    userId: props.user.id,
     username: props.user.username || '',
     name: props.user.name || '',
     title: props.user.title || '',
@@ -40,6 +40,7 @@ const ProfileForm = (props) => {
   });
 
   useEffect(() => {
+    console.log(props.user);
     if (props.user.mentor) {
       setChecked(true);
     }
@@ -57,12 +58,8 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
-  }, [
-    props.user.imgUrl,
-    props.user.mentor,
-    props.user.tags,
-    profileDetails,
-  ]);
+  }, [props.user]);
+
   const handleCheckboxChange = () => {
     setChecked(!checked);
     if (checked === false) {
