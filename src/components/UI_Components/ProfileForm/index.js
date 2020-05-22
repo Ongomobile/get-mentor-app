@@ -40,7 +40,6 @@ const ProfileForm = (props) => {
   });
 
   useEffect(() => {
-    console.log(props.user);
     if (props.user.mentor) {
       setChecked(true);
     }

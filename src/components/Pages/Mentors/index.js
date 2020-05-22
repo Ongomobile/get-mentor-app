@@ -19,7 +19,7 @@ const MentorsPage = (props) => {
     setQuery(e.target.value);
   };
 
-  const getMentors = (props) => {
+  const getMentors = () => {
     props.firebase.users().on('value', (snapshot) => {
       const requestObject = snapshot.val();
 
@@ -28,6 +28,7 @@ const MentorsPage = (props) => {
           ...requestObject[key],
           uid: key,
         }));
+        console.log(userList);
         userList.forEach((user) => {
           if (user.mentor) {
             setMentors((mentors) => [...mentors, user]);
@@ -40,12 +41,27 @@ const MentorsPage = (props) => {
 
   useEffect(() => {
     setLoading(true);
-    getMentors(props);
-  }, [props.firebase.users]);
+    getMentors();
+  }, []);
 
-  useEffect(() => {
-    props.firebase.users().off();
-  });
+  const renderMentors = (mentor) => {
+    const userTags = [];
+    let tagsObj = mentor.tags;
+    const tagList = Object.values(tagsObj);
+    tagList.forEach((tagText) => {
+      userTags.push(tagText.text);
+    });
+    return (
+      <UserCard
+        key={mentor.uid}
+        url={mentor.imgUrl}
+        name={mentor.name}
+        description={mentor.description}
+        title={mentor.title}
+        tags={userTags}
+      />
+    );
+  };
 
   return (
     <>
@@ -64,17 +80,7 @@ const MentorsPage = (props) => {
         </SearchBarWrapper>
         <MentorCardWrapper>
           {loading && <Loader />}
-          {mentors.map((mentor) => {
-            return (
-              <UserCard
-                key={mentor.uid}
-                url={mentor.imgUrl}
-                name={mentor.name}
-                description={mentor.description}
-                title={mentor.title}
-              />
-            );
-          })}
+          {mentors.map(renderMentors)}
         </MentorCardWrapper>
       </MentorsContent>
     </>

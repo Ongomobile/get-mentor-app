@@ -11,6 +11,13 @@ function UserCard(props) {
       <Avatar url={props.url} name={props.name} title={props.title} />
       <p style={{ marginBottom: '10px' }}>Can help with</p>
       <TextWrapper>
+        <StyledParagraph
+          setMargin="0 0 10px 0"
+          setFontWeight="bold"
+          setFontSize="12px"
+        >
+          {props.tags ? props.tags.join(', ') : null}
+        </StyledParagraph>
         <StyledParagraph setFontSize="12px">
           {props.description}
         </StyledParagraph>
