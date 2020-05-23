@@ -1,4 +1,8 @@
 import styled from 'styled-components';
+import { Heart } from '@styled-icons/boxicons-regular/Heart';
+import { User } from '@styled-icons/boxicons-regular/User';
+import { HomeOutline } from '@styled-icons/evaicons-outline/HomeOutline';
+import * as COLORS from '../../constants/colors';
 
 export const TabbarWrapper = styled.div`
   display: none;
@@ -30,5 +34,42 @@ export const TabbarLinks = styled.div`
 export const MobileIconWrapper = styled.div`
   @media screen and (max-width: 600px) {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
   }
+`;
+
+export const HeartIcon = styled(Heart)`
+  height: 24px;
+  width: 24px;
+  color: ${(props) => props.setColor || `${COLORS.LITEICON}`};
+  &:hover {
+    color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
+  }
+`;
+
+export const UserIcon = styled(User)`
+  height: 24px;
+  width: 24px;
+  color: ${(props) => props.setColor || `${COLORS.LITEICON}`};
+  &:hover {
+    color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
+  }
+`;
+
+export const HomeIcon = styled(HomeOutline)`
+  height: 24px;
+  width: 24px;
+  color: ${(props) => props.setColor || `${COLORS.LITEICON}`};
+  &:hover {
+    color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
+  }
+`;
+
+export const IconWrap = styled.div`
+  display: flex;
+  justify-content: center;
 `;

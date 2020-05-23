@@ -28,6 +28,10 @@ export const SearchIcon = styled(Search)`
   height: 24px;
   width: 24px;
   color: ${(props) => props.setColor || `${COLORS.MEDIUMGREY}`};
+
+  &:hover {
+    color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
+  }
 `;
 
 export const SearchWrapper = styled.div`

@@ -4,7 +4,7 @@ export const EyeIconImg = styled.img`
   position: absolute;
   top: 12px;
   right: 10px;
-  z-index: 1000;
+  z-index: 600;
   width: 18px;
   height: 18px;
   cursor: pointer;

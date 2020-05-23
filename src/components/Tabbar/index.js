@@ -1,13 +1,15 @@
 import React from 'react';
 import * as ROUTES from '../../constants/routes';
-import { Link } from 'react-router-dom';
-import { ReactComponent as HomeIcon } from '../../assets/svgs/home-icon.svg';
-import { ReactComponent as HeartIcon } from '../../assets/svgs/heart.svg';
-import { ReactComponent as ProfileIcon } from '../../assets/svgs/profile.svg';
+import { LinkStyle } from '../UI_Components/Link';
+import { LinkName } from '../UI_Components/Paragraph';
 import {
   MobileIconWrapper,
   TabbarWrapper,
   TabbarLinks,
+  HeartIcon,
+  UserIcon,
+  HomeIcon,
+  IconWrap,
 } from './tabbar-styles';
 
 const Tabbar = () => {
@@ -15,19 +17,28 @@ const Tabbar = () => {
     <TabbarWrapper>
       <TabbarLinks>
         <MobileIconWrapper>
-          <Link to={ROUTES.HOME}>
-            <HomeIcon />
-          </Link>
+          <LinkStyle to={ROUTES.HOME}>
+            <IconWrap>
+              <HomeIcon />
+            </IconWrap>
+            <LinkName>Home</LinkName>
+          </LinkStyle>
         </MobileIconWrapper>
         <MobileIconWrapper>
-          <Link to={ROUTES.MENTORS}>
-            <HeartIcon />
-          </Link>
+          <LinkStyle to={ROUTES.MENTORS}>
+            <IconWrap>
+              <HeartIcon />
+            </IconWrap>
+            <LinkName>Mentors</LinkName>
+          </LinkStyle>
         </MobileIconWrapper>
         <MobileIconWrapper>
-          <Link to={ROUTES.ACCOUNT}>
-            <ProfileIcon />
-          </Link>
+          <LinkStyle to={ROUTES.ACCOUNT}>
+            <IconWrap>
+              <UserIcon />
+            </IconWrap>
+            <LinkName>Profile</LinkName>
+          </LinkStyle>
         </MobileIconWrapper>
       </TabbarLinks>
     </TabbarWrapper>

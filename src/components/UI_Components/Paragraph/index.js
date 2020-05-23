@@ -9,3 +9,11 @@ export const StyledParagraph = styled.p`
   margin: ${(props) => props.setMargin || '0 0 0 0'};
   font-weight: ${(props) => props.setFontWeight || 'regular'};
 `;
+
+export const LinkName = styled.p`
+  color: ${(props) => props.setColor || COLORS.BLACK};
+  font-size: ${(props) => props.setFontSize || '10px'};
+  font-family: ${(props) => props.setFontFamily || 'Inter'};
+  font-weight: ${(props) => props.setFontWeight || 'thin'};
+  margin: 2px;
+`;

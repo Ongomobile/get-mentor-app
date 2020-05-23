@@ -99,7 +99,7 @@ export const CheckboxWrapper = styled.div`
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  z-index: 700;
+  z-index: 600;
 `;
 
 export const UploadLink = styled.a`
