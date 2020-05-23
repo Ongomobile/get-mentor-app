@@ -46,7 +46,7 @@ export const HeartIcon = styled(Heart)`
   height: 24px;
   width: 24px;
   color: ${(props) => props.setColor || `${COLORS.LITEICON}`};
-  &:hover {
+  &:hover:hover {
     color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
   }
 `;
@@ -55,7 +55,7 @@ export const UserIcon = styled(User)`
   height: 24px;
   width: 24px;
   color: ${(props) => props.setColor || `${COLORS.LITEICON}`};
-  &:hover {
+  &:hover:hover {
     color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
   }
 `;
@@ -64,7 +64,7 @@ export const HomeIcon = styled(HomeOutline)`
   height: 24px;
   width: 24px;
   color: ${(props) => props.setColor || `${COLORS.LITEICON}`};
-  &:hover {
+  &:hover:hover {
     color: ${(props) => props.sethovercolor || `${COLORS.PRIMARY}`};
   }
 `;
