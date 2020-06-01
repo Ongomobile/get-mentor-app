@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { withFirebase } from '../../Firebase';
+import * as ROUTES from '../../../constants/routes';
 import {
   ProfileContentWrapper,
   FormFieldWrapper,
@@ -11,6 +12,8 @@ import {
   UploadLink,
   TagsTitle,
   SaveBtnWrapper,
+  DeleteBtnWrapper,
+  DeleteBtn,
 } from './profile-form-styles';
 import Button from '../Button';
 import InputFloatLabel from '../Input';
@@ -36,6 +39,7 @@ const ProfileForm = (props) => {
     mentor: props.user.mentor || false,
     tags: props.user.tags || [],
     imgUrl: props.user.imgUrl || null,
+    imgName: props.user.imgName || '',
     roles: props.user.roles,
   });
 
@@ -124,13 +128,37 @@ const ProfileForm = (props) => {
             setProfileDetails({
               ...profileDetails,
               imgUrl: url,
+              imgName: image.name,
             });
           });
       },
     );
   };
 
-  return (
+  const handleDelete = () => {
+    const userImage = props.user.imgName;
+    const Id = props.firebase.auth.currentUser.uid;
+    const user = props.firebase.auth.currentUser;
+    if (user) {
+      props.firebase.storage
+        .ref('images')
+        .child(`${userImage}`)
+        .delete();
+      props.firebase.db.ref(`users/${Id}`).remove();
+      user
+        .delete()
+        .then(() => {
+          props.history.push(ROUTES.SIGN_UP);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    return;
+  };
+  //get-mentor.appspot.com/images
+
+  gs: return (
     <>
       <ProfileContentWrapper>
         <LeftSideBar>
@@ -213,6 +241,11 @@ const ProfileForm = (props) => {
             Change Password
           </Heading>
           <PasswordChangeForm />
+          <DeleteBtnWrapper>
+            <DeleteBtn onClick={() => handleDelete()}>
+              Delete Account
+            </DeleteBtn>
+          </DeleteBtnWrapper>
         </FormFieldWrapper>
       </ProfileContentWrapper>
     </>

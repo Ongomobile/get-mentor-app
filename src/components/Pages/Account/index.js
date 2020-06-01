@@ -29,6 +29,7 @@ const AccountPage = (props) => {
         mentor: data.mentor,
         tags: data.tags,
         imgUrl: data.imgUrl,
+        imgName: data.imgName,
         roles: data.roles,
       })
       .catch((err) => {
@@ -47,6 +48,7 @@ const AccountPage = (props) => {
           description: authUser.description,
           mentor: authUser.mentor,
           imgUrl: authUser.imgUrl,
+          imgName: authUser.imgName,
           tags: authUser.tags,
           roles: authUser.roles,
         };

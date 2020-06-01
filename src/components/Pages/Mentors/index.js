@@ -44,6 +44,10 @@ const MentorsPage = (props) => {
     getMentors();
   }, []);
 
+  const handleContactClick = () => {
+    alert('Namjai App is still a work in progress');
+  };
+
   const renderMentors = (mentor) => {
     const userTags = [];
     let tagsObj = mentor.tags;
@@ -59,6 +63,7 @@ const MentorsPage = (props) => {
         description={mentor.description}
         title={mentor.title}
         tags={userTags}
+        handleClick={handleContactClick}
       />
     );
   };

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from '../Media';
+import * as COLORS from '../../../constants/colors';
 
 export const ProfileHeader = styled.div`
   position: absolute;
@@ -128,4 +129,23 @@ export const TagsTitle = styled.p`
 export const SaveBtnWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+`;
+
+export const DeleteBtnWrapper = styled.div`
+  height: 50px;
+  margin-top: 40px;
+`;
+
+export const DeleteBtn = styled.div`
+  text-align: center;
+  background-color: red;
+  border-radius: 4px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: white;
+
+  &:hover {
+    background-color: ${COLORS.DARKGREY};
+    color: white;
+  }
 `;
