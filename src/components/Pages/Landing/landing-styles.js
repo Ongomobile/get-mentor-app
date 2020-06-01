@@ -99,5 +99,4 @@ export const MentorsBtnWrapper = styled.div`
   justify-content: center;
   margin-top: 50px;
   height: 60px;
-  padding: 5px;
 `;
