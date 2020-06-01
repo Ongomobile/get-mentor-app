@@ -156,9 +156,8 @@ const ProfileForm = (props) => {
     }
     return;
   };
-  //get-mentor.appspot.com/images
 
-  gs: return (
+  return (
     <>
       <ProfileContentWrapper>
         <LeftSideBar>
