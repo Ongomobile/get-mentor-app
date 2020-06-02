@@ -10,6 +10,7 @@ export const inverseBtnOveride = {
   paddingRight: 14,
   paddingBottom: 12,
   PaddingLeft: 14,
+  marginTop: 40,
 };
 
 export const HeroContainer = styled.div`
