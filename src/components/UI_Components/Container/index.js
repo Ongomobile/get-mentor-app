@@ -26,7 +26,6 @@ export const Container = styled.div`
   
   ${media.custom1`
     padding-top: 60px;
-    padding-bottom:20%;
   `}
   
  ${media.mdPhPort`

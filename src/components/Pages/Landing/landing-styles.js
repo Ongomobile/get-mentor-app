@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as COLORS from '../../../constants/colors';
 
-export const btnOveride = { margin: '0' };
+export const btnOveride = { marginTop: '40px' };
 
 export const inverseBtnOveride = {
   width: 340,
