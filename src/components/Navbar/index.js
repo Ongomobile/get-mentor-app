@@ -94,7 +94,7 @@ const NavigationNonAuth = () => {
               <LinkStyle to={ROUTES.HOME}>Home</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
-              <LinkStyle to={ROUTES.MENTORS}>Mentors</LinkStyle>
+              <LinkStyle to={ROUTES.SIGN_IN}>Mentors</LinkStyle>
             </NavLinkWrapper>
             <NavLinkWrapper>
               <LinkStyle to={ROUTES.SIGN_IN}>Log In</LinkStyle>
