@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { withFirebase } from '../../Firebase';
 import {
   MentorsContent,
@@ -19,7 +19,7 @@ const MentorsPage = (props) => {
     setQuery(e.target.value);
   };
 
-  const getMentors = () => {
+  const getMentors = useCallback(() => {
     props.firebase.users().on('value', (snapshot) => {
       const requestObject = snapshot.val();
 
@@ -37,12 +37,12 @@ const MentorsPage = (props) => {
         });
       }
     });
-  };
+  });
 
   useEffect(() => {
     setLoading(true);
     getMentors();
-  });
+  }, [getMentors]);
 
   const handleContactClick = () => {
     alert('Namjai App is still a work in progress');
