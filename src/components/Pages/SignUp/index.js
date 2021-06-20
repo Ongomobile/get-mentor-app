@@ -10,7 +10,6 @@ import CheckBox from '../../UI_Components/Checkbox';
 import * as COLORS from '../../../constants/colors';
 
 import {
-  // Button,
   Errors,
   FormWrapper,
   EyeIconImg,
