@@ -36,7 +36,7 @@ const MentorsPage = (props) => {
         });
       }
     });
-  }, []);
+  }, [props.firebase]);
 
   useEffect(() => {
     setLoading(true);
