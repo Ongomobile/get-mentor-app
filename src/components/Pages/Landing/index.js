@@ -65,6 +65,7 @@ const LandingPage = () => (
           description={tempDes}
           url={maryaPicUrl}
           handleClick={callAlert}
+          alt="Marya Antonia Fontsweizzer Information"
         />
         <UserCard
           name="Mitchell Russell"
@@ -72,6 +73,7 @@ const LandingPage = () => (
           description={tempDes}
           url={michellUrl}
           handleClick={callAlert}
+          alt="Mitchell Russell Information"
         />
         <UserCard
           name="Arlene Pena"
@@ -79,6 +81,7 @@ const LandingPage = () => (
           description={tempDes}
           url={arleneUrl}
           handleClick={callAlert}
+          alt="Arlene Pena Information"
         />
         <UserCard
           name="Mark Simmmons"
@@ -86,6 +89,7 @@ const LandingPage = () => (
           description={tempDes}
           url={markUrl}
           handleClick={callAlert}
+          alt="Mark Simmmons Information"
         />
       </MentorsWrapper>
       <MentorsBtnWrapper>
