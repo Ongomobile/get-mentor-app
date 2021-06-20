@@ -28,7 +28,6 @@ const MentorsPage = (props) => {
           ...requestObject[key],
           uid: key,
         }));
-        console.log(userList);
         userList.forEach((user) => {
           if (user.mentor) {
             setMentors((mentors) => [...mentors, user]);
@@ -37,7 +36,7 @@ const MentorsPage = (props) => {
         });
       }
     });
-  });
+  }, [requestObject, userList]);
 
   useEffect(() => {
     setLoading(true);
