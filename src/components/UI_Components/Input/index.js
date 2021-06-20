@@ -33,6 +33,7 @@ const InputFloatLabel = ({
     <InputContainer focused={isFocused}>
       {renderLabel()}
       <input
+        id={name}
         name={name}
         value={value}
         type={type}

@@ -179,7 +179,7 @@ const SignUpHooks = (props) => {
         <SignUpGoogle />
       </FormWrapper>
       <ImgWrapper>
-        <RegisterImg src={RegisterSvg} />
+        <RegisterImg src={RegisterSvg} alt="man on the phone" />
       </ImgWrapper>
     </ContentWrapper>
   );
