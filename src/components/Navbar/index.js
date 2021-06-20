@@ -78,14 +78,14 @@ const NavigationNonAuth = () => {
   return (
     <div>
       <MobileLogoWrapper>
-        <LinkStyle to={ROUTES.LANDING} aria-label="first link">
+        <LinkStyle to={ROUTES.LANDING}>
           <MobileLogo />
         </LinkStyle>
       </MobileLogoWrapper>
       <Header>
         <NavContainer>
           <LogoWrapper>
-            <Link to={ROUTES.LANDING} aria-label="first link">
+            <Link to={ROUTES.LANDING}>
               <Logo />
             </Link>
           </LogoWrapper>
