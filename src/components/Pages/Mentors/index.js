@@ -36,7 +36,7 @@ const MentorsPage = (props) => {
         });
       }
     });
-  }, [requestObject, userList]);
+  }, []);
 
   useEffect(() => {
     setLoading(true);

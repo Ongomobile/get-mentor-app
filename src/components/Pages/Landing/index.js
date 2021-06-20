@@ -53,7 +53,10 @@ const LandingPage = () => (
         </Button>
       </HeroContentLeft>
       <HeroContentRight>
-        <HeroImgWrapper src={LovingDude} />
+        <HeroImgWrapper
+          src={LovingDude}
+          alt="Image of man with heart"
+        />
       </HeroContentRight>
     </HeroContainer>
     <LandingMentorsContainer>
