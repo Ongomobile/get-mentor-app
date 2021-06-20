@@ -36,7 +36,7 @@ const NavigationAuth = ({ authUser }) => {
   return (
     <div>
       <MobileLogoWrapper>
-        <LinkStyle to={ROUTES.LANDING} aria-label="first link">
+        <LinkStyle to={ROUTES.LANDING}>
           <MobileLogo />
         </LinkStyle>
       </MobileLogoWrapper>
@@ -46,7 +46,7 @@ const NavigationAuth = ({ authUser }) => {
       <Header>
         <NavContainer>
           <LogoWrapper>
-            <LinkStyle to={ROUTES.LANDING} aria-label="first link">
+            <LinkStyle to={ROUTES.LANDING}>
               <Logo />
             </LinkStyle>
           </LogoWrapper>
