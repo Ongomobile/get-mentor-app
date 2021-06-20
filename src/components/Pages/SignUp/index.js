@@ -1,4 +1,3 @@
-/*eslint no-unused-vars: "error"*/
 import React, { useState, useEffect } from 'react';
 import { compose } from 'recompose';
 import InputFloatLabel from '../../UI_Components/Input';
