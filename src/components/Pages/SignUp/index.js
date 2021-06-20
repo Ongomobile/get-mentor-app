@@ -226,7 +226,7 @@ const SignUpGoogleBase = (props) => {
 const SignUpLink = () => (
   <p style={{ textAlign: 'center', marginTop: '20px' }}>
     Don't have an account?{' '}
-    <Link style={{ color: COLORS.PRIMARY }} to={ROUTES.SIGN_UP}>
+    <Link style={{ color: COLORS.BLACK }} to={ROUTES.SIGN_UP}>
       Sign Up
     </Link>
   </p>

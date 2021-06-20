@@ -144,6 +144,7 @@ const SignInFormBase = (props) => {
           />
           <EyeIconImg
             src={EyeIcon}
+            alt="show or hide password"
             onClick={togglePasswordVisiblity}
           />
         </PasswordWrapper>
@@ -203,6 +204,7 @@ const SignInGoogleBase = (props) => {
       <GoogleSignInBtn
         src={GoogleSignIn}
         onClick={handleGoogleClicked}
+        alt="google sign in button"
       />
       {error && <p>{error.message}</p>}
     </GoogleBtnWrapper>

@@ -25,7 +25,7 @@ const InputFloatLabel = ({
   };
 
   const renderLabel = () =>
-    label && <label for={label}>{label}</label>;
+    label && <label for={name}>{label}</label>;
 
   const isFocused = focused || String(value).length;
 

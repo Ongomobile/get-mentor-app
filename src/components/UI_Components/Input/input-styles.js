@@ -20,7 +20,6 @@ export const InputContainer = styled.div`
   }
   & > label {
     color: ${COLORS.MEDIUMGREY};
-    /* color: #757575; */
     position: absolute;
     top: 15px;
     left: 15px;
