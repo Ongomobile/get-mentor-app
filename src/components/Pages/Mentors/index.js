@@ -42,7 +42,7 @@ const MentorsPage = (props) => {
   useEffect(() => {
     setLoading(true);
     getMentors();
-  });
+  }, [setLoading, getMentors]);
 
   const handleContactClick = () => {
     alert('Namjai App is still a work in progress');
