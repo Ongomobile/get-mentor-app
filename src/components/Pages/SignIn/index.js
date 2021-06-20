@@ -159,7 +159,7 @@ const SignInFormBase = (props) => {
         <SignUpLink />
       </SignInFormWrapper>
       <ImgWrapper>
-        <SignInImg src={SignInSvg} />
+        <SignInImg src={SignInSvg} alt="charactor using a phone" />
       </ImgWrapper>
     </SignInContentWrapper>
   );
