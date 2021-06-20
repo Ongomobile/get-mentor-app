@@ -24,7 +24,8 @@ const InputFloatLabel = ({
     onBlur();
   };
 
-  const renderLabel = () => label && <label>{label}</label>;
+  const renderLabel = () =>
+    label && <label for={label}>{label}</label>;
 
   const isFocused = focused || String(value).length;
 
