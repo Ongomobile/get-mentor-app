@@ -39,6 +39,7 @@ const AccountPage = (props) => {
   return (
     <AuthUserContext.Consumer>
       {(authUser) => {
+        console.log('authUser', authUser);
         const userDetails = {
           id: authUser.uid,
           username: authUser.username,
