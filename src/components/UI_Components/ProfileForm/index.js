@@ -1,3 +1,4 @@
+/*eslint no-unused-vars: "error"*/
 import React, { useState, useEffect } from 'react';
 import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
@@ -61,7 +62,7 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
-  }, [props.user]);
+  }, [props.user, profileDetails]);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);

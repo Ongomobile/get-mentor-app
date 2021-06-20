@@ -17,7 +17,7 @@ function usePasswordValidator(config = { min: 6, max: 10 }) {
         `Password must be less than ${config.max} characters.`,
       );
     }
-  }, [password]);
+  }, [password, config.min, config.max]);
 
   return [password, setPassword, passwordError];
 }
