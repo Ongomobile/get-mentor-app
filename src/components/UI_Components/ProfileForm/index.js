@@ -63,7 +63,7 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
-  }, [props]);
+  }, [props, ...profileDetails]);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
