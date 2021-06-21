@@ -62,6 +62,8 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.user.mentor, props.user.tags, props.user.imgUrl]);
 
   const handleCheckboxChange = () => {
