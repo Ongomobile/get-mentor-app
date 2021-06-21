@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
