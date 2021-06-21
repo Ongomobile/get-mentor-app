@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-// eslint-disable react-hooks/exhaustive-deps
 import React, { useState, useEffect } from 'react';
 import { withFirebase } from '../../Firebase';
 import * as ROUTES from '../../../constants/routes';
@@ -63,7 +62,7 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
-  }, [props, ...profileDetails]);
+  }, [props]);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);

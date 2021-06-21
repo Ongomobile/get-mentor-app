@@ -2,10 +2,6 @@
   "extends": ["prettier"],
   "plugins": ["prettier"],
   "rules": {
-    "prettier/prettier": ["error"],
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used" }
-    ]
+    "prettier/prettier": ["error"]
   }
 }
