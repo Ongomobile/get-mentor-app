@@ -11,7 +11,7 @@ import DefaultImg from '../../../assets/images/no-img.png';
 const Avatar = (props) => {
   return (
     <AvatarWrapper>
-      <AvatarImg src={props.url || DefaultImg} alt="avatar image" />
+      <AvatarImg src={props.url || DefaultImg} />
       <AvatarTextWrapper>
         <AvatarName>{props.name}</AvatarName>
         <AvatarTitle>{props.title}</AvatarTitle>

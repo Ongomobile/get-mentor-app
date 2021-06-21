@@ -4,6 +4,7 @@ import {
   SearchIcon,
   SearchWrapper,
 } from './search-input-styles';
+import { Search } from '@styled-icons/evaicons-solid/Search';
 
 const SearchInput = (props) => {
   return (

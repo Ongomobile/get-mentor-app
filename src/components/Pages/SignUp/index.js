@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { compose } from 'recompose';
 import InputFloatLabel from '../../UI_Components/Input';
@@ -11,6 +10,7 @@ import CheckBox from '../../UI_Components/Checkbox';
 import * as COLORS from '../../../constants/colors';
 
 import {
+  // Button,
   Errors,
   FormWrapper,
   EyeIconImg,
@@ -59,11 +59,14 @@ const SignUpHooks = (props) => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const [checked, setChecked] = useState(false);
-  const [passwordOne, setPasswordOne, passwordError] =
-    usePasswordValidator({
-      min: 6,
-      max: 15,
-    });
+  const [
+    passwordOne,
+    setPasswordOne,
+    passwordError,
+  ] = usePasswordValidator({
+    min: 6,
+    max: 15,
+  });
 
   useEffect(() => {
     if (!email) {
@@ -179,7 +182,7 @@ const SignUpHooks = (props) => {
         <SignUpGoogle />
       </FormWrapper>
       <ImgWrapper>
-        <RegisterImg src={RegisterSvg} alt="man on the phone" />
+        <RegisterImg src={RegisterSvg} />
       </ImgWrapper>
     </ContentWrapper>
   );
@@ -226,7 +229,7 @@ const SignUpGoogleBase = (props) => {
 const SignUpLink = () => (
   <p style={{ textAlign: 'center', marginTop: '20px' }}>
     Don't have an account?{' '}
-    <Link style={{ color: COLORS.BLACK }} to={ROUTES.SIGN_UP}>
+    <Link style={{ color: COLORS.PRIMARY }} to={ROUTES.SIGN_UP}>
       Sign Up
     </Link>
   </p>
