@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import { compose } from 'recompose';
 import InputFloatLabel from '../../UI_Components/Input';
@@ -59,14 +60,11 @@ const SignUpHooks = (props) => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState(null);
   const [checked, setChecked] = useState(false);
-  const [
-    passwordOne,
-    setPasswordOne,
-    passwordError,
-  ] = usePasswordValidator({
-    min: 6,
-    max: 15,
-  });
+  const [passwordOne, setPasswordOne, passwordError] =
+    usePasswordValidator({
+      min: 6,
+      max: 15,
+    });
 
   useEffect(() => {
     if (!email) {
