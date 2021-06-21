@@ -45,7 +45,7 @@ const ProfileForm = (props) => {
     roles: props.user.roles,
   });
 
-  useEffect(() => {
+  const setDetails = (props) => {
     if (props.user.mentor) {
       setChecked(true);
     }
@@ -63,7 +63,11 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
-  }, [props.user.mentor, props.user.tags, props.user.imgUrl]);
+  };
+
+  useEffect(() => {
+    setDetails();
+  });
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
