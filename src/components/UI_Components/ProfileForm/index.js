@@ -62,12 +62,7 @@ const ProfileForm = (props) => {
       });
       setUrl(proPicUrl);
     }
-  }, [
-    props.user.mentor,
-    props.user.tags,
-    props.user.imgUrl,
-    setProfileDetails,
-  ]);
+  }, [props.user.mentor, props.user.tags, props.user.imgUrl]);
 
   const handleCheckboxChange = () => {
     setChecked(!checked);
