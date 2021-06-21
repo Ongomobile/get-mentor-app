@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, useCallback } from 'react';
 import { withFirebase } from '../../Firebase';
 import {
@@ -19,7 +20,7 @@ const MentorsPage = (props) => {
     setQuery(e.target.value);
   };
 
-  const getMentors = useCallback(() => {
+  const getMentors = () => {
     props.firebase.users().on('value', (snapshot) => {
       const requestObject = snapshot.val();
 
@@ -36,12 +37,12 @@ const MentorsPage = (props) => {
         });
       }
     });
-  }, [requestObject, userList]);
+  };
 
   useEffect(() => {
     setLoading(true);
     getMentors();
-  }, [getMentors]);
+  }, []);
 
   const handleContactClick = () => {
     alert('Namjai App is still a work in progress');
