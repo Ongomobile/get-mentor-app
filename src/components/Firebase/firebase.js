@@ -1,3 +1,4 @@
+/* eslint-disable no-dupe-keys */
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/database';
